@@ -87,7 +87,7 @@ export default class Emitter{
 	 * @param  {*} [ctx] - the context to run the functions under
 	 * @return {this}
 	 *
-	 * TODO: make once() accept a "removable" flag 15/4/17
+	 * TODO: make once() accept a "removable" flag
 	 */
 	once(type, func, ctx){
 		if(isNil(type))

@@ -2,7 +2,9 @@
   "name": "regexp-events",
   "version": "0.1.0",
   "description": "A simple RegExp event emitter",
-  "main": "dist/regexp-events.min.js",
+  "main": "dist/regexp-events.js",
+  "browser": "dist/regexp-events.umd.js",
+  "module": "dist/regexp-events.es.js",
   "scripts": {
     "prepublish": "npm run test && npm run build",
     "clean": "rimraf dist",
