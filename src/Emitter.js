@@ -1,8 +1,9 @@
 import Event from './Event';
-import {clearListeners, regexpEqual} from './utils';
+import {clearListeners, isRegExpEqual} from './utils';
 import isString from 'lodash.isstring';
 import isFunction from 'lodash.isfunction';
 import isNil from 'lodash.isnil';
+import isRegExp from 'lodash.isregexp';
 
 /**
  * a simple event emitter
@@ -122,6 +123,8 @@ export default class Emitter{
 	 * @param  {Function} func - this has to be the exact function that was bound
 	 * @param  {*} [ctx] - this has to be the exact context that was bound with the listener
 	 * @return {this}
+	 *
+	 * TODO add force flag to Emitter.off
 	 */
 	off(type, func, ctx){
 		let eventMap = this.eventMap;
@@ -132,12 +135,12 @@ export default class Emitter{
 			return this;
 
 		if(eventType instanceof Event)
-			eventType = type.type;
+			eventType = eventType.type;
 
 		if(!eventMap.has(eventType))
 			eventMap.set(eventType, []);
 
-		if(isString(type)){
+		if(isString(eventType)){
 			let listeners = eventMap.get(eventType);
 			listeners.forEach((listener, i) => {
 				// done bother about force in this situation, because the user provied the exact type, function, and ctx
@@ -149,10 +152,10 @@ export default class Emitter{
 			if(listeners.length === 0)
 				eventMap.delete(eventType);
 		}
-		else if(eventType instanceof RegExp){
+		else if(isRegExp(eventType)){
 			eventMap.forEach((listeners, listenersEventType) => {
 				// if the regexp flags and source match then remove the listeners
-				if(listenersEventType instanceof RegExp && regexpEqual(eventType, listenersEventType)){
+				if(isRegExp(listenersEventType) && isRegExpEqual(eventType, listenersEventType)){
 					listeners.forEach((listener, i) => {
 						if(listener.func === func && ctx === listener.ctx)
 							listeners.splice(i,1);
@@ -171,7 +174,7 @@ export default class Emitter{
 	/**
 	 * fires ad event on this emitter
 	 * @param {String|Event} type
-	 * @param {...*} args - the arguments to be passed to the listeners
+	 * @param {...*} args - the arguments to be passed to the listeners. these will be ignored if an Event was passed in
 	 * @return {this}
 	 */
 	emit(type, ...args){
@@ -189,20 +192,20 @@ export default class Emitter{
 		else
 			event = new Event(type, this, args);
 
-		let listenerArgs = Array.from(args).concat([event]);
+		let listenerArgs = Array.from(event.data || args).concat([event]);
 		eventMap.forEach((listeners, listenersEventType) => {
 			if(
 				// if they are both strings and they match
 				(isString(event.type) && listenersEventType === event.type) ||
 				// if the listenersEventType is a RegExp and the event type is a string, see if they match
-				(isString(event.type) && listenersEventType instanceof RegExp && listenersEventType.test(event.type)) ||
+				(isString(event.type) && isRegExp(listenersEventType) && listenersEventType.test(event.type)) ||
 				// if they are both RegExp see if they match
-				(event.type instanceof RegExp && listenersEventType instanceof RegExp && regexpEqual(listenersEventType, event.type))
+				(isRegExp(event.type) && isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, event.type))
 			){
 				listeners.forEach(listener => {
 					listener.func.apply(listener.ctx, listenerArgs);
 					if(listener.once)
-						this.off(event.type, listener.func, listener.ctx);
+						this.off(event.type, listener.func, listener.ctx, true);
 				});
 			}
 		});
@@ -212,7 +215,7 @@ export default class Emitter{
 
 	/**
 	 * removes all events of "type"
-	 * NOTE: passing no arguments will clean all listens
+	 * NOTE: passing no arguments will clean all listeners
 	 * NOTE: passing a single boolean will clear all listens and act as the force flag
 	 * @param {RegExp|String|Event|Boolean} [type] - the type of event
 	 * @param {Boolean} [force = false] - whether to force remove the listeners
@@ -233,28 +236,28 @@ export default class Emitter{
 		else if(eventType instanceof Event){
 			this.clear(eventType.type, useRegExp, force);
 		}
-		else if(eventType instanceof RegExp){
+		else if(isRegExp(eventType)){
 			Array.from(eventMap).map(a => a[0]).forEach(listenersEventType => {
 				if(
 					// if the string matches the regex
 					(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType)) ||
 					// if the regex(s) match
-					(listenersEventType instanceof RegExp && regexpEqual(listenersEventType, eventType))
+					(isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, eventType))
 				){
 					clearListeners(eventMap, listenersEventType, force);
 				}
 			})
 		}
-		else if(eventType === true){
+		else if(arguments.length === 1 && eventType === true){
 			eventMap.clear();
 		}
-		else if(eventType === false || eventType === undefined){
+		else if(eventType === false || eventType === undefined && arguments.length <= 1){
 			eventMap.forEach((listeners, type) => {
 				listeners.filter(listener => listener.removable).forEach(listener => {
 					listeners.splice(listeners.indexOf(listener), 1);
 				});
 
-				// if there are not listeners left, remove array
+				// if there are no listeners left, remove the array
 				if(listeners.length === 0)
 					eventMap.delete(type);
 			});
@@ -283,12 +286,12 @@ export default class Emitter{
 		else if(eventType instanceof Event){
 			return eventMap.has(eventType.type) ? eventMap.get(eventType.type).length : 0;
 		}
-		else if(eventType instanceof RegExp){
+		else if(isRegExp(eventType)){
 			let total = 0;
 			eventMap.forEach((listeners, listenersEventType) => {
 				if(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType))
 					total += listeners.length;
-				else if(regexpEqual(listenersEventType, eventType))
+				else if(isRegExpEqual(listenersEventType, eventType))
 					total += listeners.length;
 			});
 			return total;

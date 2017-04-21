@@ -1,5 +1,3 @@
-## regexp-events
-
 A simple and small event emitter that supports regular expressions.
 
 ### Example

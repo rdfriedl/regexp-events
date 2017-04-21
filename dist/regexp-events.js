@@ -1,3 +1,7 @@
+/**
+ * regexp-events v0.1.1
+ * built Thu Apr 20 2017 20:18:14 GMT-0500 (Central Daylight Time)
+ */
 'use strict';
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -41,7 +45,7 @@ function Event(type, target, data) {
 	classCallCheck(this, Event);
 
 	/**
-  * the type of event, this can be anything, but its a good idea to to make it a string
+  * the type of event
   * @type {String}
   */
 	this.type = type;
@@ -73,7 +77,7 @@ function clearListeners(eventMap, eventType, force) {
 	}
 }
 
-function regexpEqual(r1, r2) {
+function isRegExpEqual(r1, r2) {
 	return r1 instanceof RegExp && r2 instanceof RegExp && r2.source === r1.source && r2.global === r1.global && r2.ignoreCase === r1.ignoreCase && r2.multiline === r1.multiline && r2.sticky === r1.sticky && r2.unicode === r1.unicode;
 }
 
@@ -283,6 +287,140 @@ function isNil(value) {
 
 var index$2 = isNil;
 
+var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+
+
+
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var index$3 = createCommonjsModule(function (module, exports) {
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** `Object#toString` result references. */
+var regexpTag = '[object RegExp]';
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof commonjsGlobal == 'object' && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
+
+/** Detect free variable `exports`. */
+var freeExports = 'object' == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsRegExp = nodeUtil && nodeUtil.isRegExp;
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/**
+ * The base implementation of `_.isRegExp` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a regexp, else `false`.
+ */
+function baseIsRegExp(value) {
+  return isObject(value) && objectToString.call(value) == regexpTag;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/6.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return !!value && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is classified as a `RegExp` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a regexp, else `false`.
+ * @example
+ *
+ * _.isRegExp(/abc/);
+ * // => true
+ *
+ * _.isRegExp('/abc/');
+ * // => false
+ */
+var isRegExp = nodeIsRegExp ? baseUnary(nodeIsRegExp) : baseIsRegExp;
+
+module.exports = isRegExp;
+});
+
 /**
  * a simple event emitter
  */
@@ -347,7 +485,7 @@ var Emitter = function () {
    * @param  {*} [ctx] - the context to run the functions under
    * @return {this}
    *
-   * TODO: make once() accept a "removable" flag 15/4/17
+   * TODO: make once() accept a "removable" flag
    */
 
 	}, {
@@ -380,6 +518,8 @@ var Emitter = function () {
    * @param  {Function} func - this has to be the exact function that was bound
    * @param  {*} [ctx] - this has to be the exact context that was bound with the listener
    * @return {this}
+   *
+   * TODO add force flag to Emitter.off
    */
 
 	}, {
@@ -391,11 +531,11 @@ var Emitter = function () {
 			// if there is not event map, just exit
 			if (!eventMap) return this;
 
-			if (eventType instanceof Event) eventType = type.type;
+			if (eventType instanceof Event) eventType = eventType.type;
 
 			if (!eventMap.has(eventType)) eventMap.set(eventType, []);
 
-			if (index(type)) {
+			if (index(eventType)) {
 				var listeners = eventMap.get(eventType);
 				listeners.forEach(function (listener, i) {
 					// done bother about force in this situation, because the user provied the exact type, function, and ctx
@@ -404,10 +544,10 @@ var Emitter = function () {
 
 				// remove the listener array if there are no listeners left
 				if (listeners.length === 0) eventMap.delete(eventType);
-			} else if (eventType instanceof RegExp) {
+			} else if (index$3(eventType)) {
 				eventMap.forEach(function (listeners, listenersEventType) {
 					// if the regexp flags and source match then remove the listeners
-					if (listenersEventType instanceof RegExp && regexpEqual(eventType, listenersEventType)) {
+					if (index$3(listenersEventType) && isRegExpEqual(eventType, listenersEventType)) {
 						listeners.forEach(function (listener, i) {
 							if (listener.func === func && ctx === listener.ctx) listeners.splice(i, 1);
 						});
@@ -424,7 +564,7 @@ var Emitter = function () {
 		/**
    * fires ad event on this emitter
    * @param {String|Event} type
-   * @param {...*} args - the arguments to be passed to the listeners
+   * @param {...*} args - the arguments to be passed to the listeners. these will be ignored if an Event was passed in
    * @return {this}
    */
 
@@ -448,18 +588,18 @@ var Emitter = function () {
 
 			if (type instanceof Event) event = type;else event = new Event(type, this, args);
 
-			var listenerArgs = Array.from(args).concat([event]);
+			var listenerArgs = Array.from(event.data || args).concat([event]);
 			eventMap.forEach(function (listeners, listenersEventType) {
 				if (
 				// if they are both strings and they match
 				index(event.type) && listenersEventType === event.type ||
 				// if the listenersEventType is a RegExp and the event type is a string, see if they match
-				index(event.type) && listenersEventType instanceof RegExp && listenersEventType.test(event.type) ||
+				index(event.type) && index$3(listenersEventType) && listenersEventType.test(event.type) ||
 				// if they are both RegExp see if they match
-				event.type instanceof RegExp && listenersEventType instanceof RegExp && regexpEqual(listenersEventType, event.type)) {
+				index$3(event.type) && index$3(listenersEventType) && isRegExpEqual(listenersEventType, event.type)) {
 					listeners.forEach(function (listener) {
 						listener.func.apply(listener.ctx, listenerArgs);
-						if (listener.once) _this.off(event.type, listener.func, listener.ctx);
+						if (listener.once) _this.off(event.type, listener.func, listener.ctx, true);
 					});
 				}
 			});
@@ -469,7 +609,7 @@ var Emitter = function () {
 
 		/**
    * removes all events of "type"
-   * NOTE: passing no arguments will clean all listens
+   * NOTE: passing no arguments will clean all listeners
    * NOTE: passing a single boolean will clear all listens and act as the force flag
    * @param {RegExp|String|Event|Boolean} [type] - the type of event
    * @param {Boolean} [force = false] - whether to force remove the listeners
@@ -493,7 +633,7 @@ var Emitter = function () {
 				clearListeners(eventMap, eventType, force);
 			} else if (eventType instanceof Event) {
 				this.clear(eventType.type, useRegExp, force);
-			} else if (eventType instanceof RegExp) {
+			} else if (index$3(eventType)) {
 				Array.from(eventMap).map(function (a) {
 					return a[0];
 				}).forEach(function (listenersEventType) {
@@ -501,13 +641,13 @@ var Emitter = function () {
 					// if the string matches the regex
 					index(listenersEventType) && useRegExp && eventType.test(listenersEventType) ||
 					// if the regex(s) match
-					listenersEventType instanceof RegExp && regexpEqual(listenersEventType, eventType)) {
+					index$3(listenersEventType) && isRegExpEqual(listenersEventType, eventType)) {
 						clearListeners(eventMap, listenersEventType, force);
 					}
 				});
-			} else if (eventType === true) {
+			} else if (arguments.length === 1 && eventType === true) {
 				eventMap.clear();
-			} else if (eventType === false || eventType === undefined) {
+			} else if (eventType === false || eventType === undefined && arguments.length <= 1) {
 				eventMap.forEach(function (listeners, type) {
 					listeners.filter(function (listener) {
 						return listener.removable;
@@ -515,7 +655,7 @@ var Emitter = function () {
 						listeners.splice(listeners.indexOf(listener), 1);
 					});
 
-					// if there are not listeners left, remove array
+					// if there are no listeners left, remove the array
 					if (listeners.length === 0) eventMap.delete(type);
 				});
 			}
@@ -545,10 +685,10 @@ var Emitter = function () {
 				return eventMap.has(eventType) ? eventMap.get(eventType).length : 0;
 			} else if (eventType instanceof Event) {
 				return eventMap.has(eventType.type) ? eventMap.get(eventType.type).length : 0;
-			} else if (eventType instanceof RegExp) {
+			} else if (index$3(eventType)) {
 				var total = 0;
 				eventMap.forEach(function (listeners, listenersEventType) {
-					if (index(listenersEventType) && useRegExp && eventType.test(listenersEventType)) total += listeners.length;else if (regexpEqual(listenersEventType, eventType)) total += listeners.length;
+					if (index(listenersEventType) && useRegExp && eventType.test(listenersEventType)) total += listeners.length;else if (isRegExpEqual(listenersEventType, eventType)) total += listeners.length;
 				});
 				return total;
 			} else {

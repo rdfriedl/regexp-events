@@ -11,7 +11,7 @@ export default class Event{
 	 */
 	constructor(type, target, data){
 		/**
-		 * the type of event, this can be anything, but its a good idea to to make it a string
+		 * the type of event
 		 * @type {String}
 		 */
 		this.type = type;

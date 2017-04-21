@@ -13,7 +13,7 @@ export function clearListeners(eventMap, eventType, force){
 	}
 }
 
-export function regexpEqual(r1, r2){
+export function isRegExpEqual(r1, r2){
 	return (
 		r1 instanceof RegExp &&
 		r2 instanceof RegExp &&
