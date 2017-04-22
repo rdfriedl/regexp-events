@@ -1,9 +1,10 @@
 export function clearListeners(eventMap, eventType, force){
-	if(force)
+	if(force) {
 		eventMap.delete(eventType);
-	else{
+	}
+	else {
 		let listeners = eventMap.get(eventType);
-		listeners.filter(listener => listener.removable).forEach((listener, i) => {
+		listeners.filter(listener => !listener.isStatic).forEach((listener, i) => {
 			listeners.splice(listeners.indexOf(listener), 1);
 		});
 

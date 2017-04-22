@@ -1,6 +1,6 @@
 {
   "name": "regexp-events",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A simple RegExp event emitter",
   "main": "dist/regexp-events.js",
   "browser": "dist/regexp-events.umd.js",
@@ -18,7 +18,9 @@
     "build:umd:min": "rollup -c config/rollup.umd.min.config.js",
     "clean:test": "rimraf coverage",
     "pretest": "npm run clean:test",
-    "test": "karma start config/karma.config.js"
+    "test": "karma start config/karma.config.js",
+    "test:quick": "karma start config/karma.quick.js --single-run",
+    "test:debug": "karma start config/karma.debug.js"
   },
   "keywords": [
     "events",
@@ -69,7 +71,6 @@
   },
   "dependencies": {
     "lodash.isfunction": "^3.0.8",
-    "lodash.isnil": "^4.0.0",
     "lodash.isregexp": "^4.0.1",
     "lodash.isstring": "^4.0.1"
   }

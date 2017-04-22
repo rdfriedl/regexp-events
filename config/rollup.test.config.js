@@ -22,5 +22,5 @@ module.exports = {
 			sourceMaps: true
 		})
 	],
-	sourceMap: true
+	sourceMap: 'inline'
 };

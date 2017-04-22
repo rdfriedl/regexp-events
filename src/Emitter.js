@@ -2,8 +2,19 @@ import Event from './Event';
 import {clearListeners, isRegExpEqual} from './utils';
 import isString from 'lodash.isstring';
 import isFunction from 'lodash.isfunction';
-import isNil from 'lodash.isnil';
 import isRegExp from 'lodash.isregexp';
+
+function isBoolean(v) {
+	return v === true || v === false;
+}
+
+function findInArgArray(args, fn, start, df) {
+	for(let i = 0; i < args.length-start; i++)
+		if(fn(args[start+i]))
+			return args[start+i];
+
+	return df;
+}
 
 /**
  * a simple event emitter
@@ -30,13 +41,24 @@ export default class Emitter{
 	/**
 	 * creates a new Map for the emitter
 	 * @param {Emitter} emitter
-	 * @return {WeakMap}
+	 * @return {Map}
 	 */
 	static createEventMap(emitter){
 		let map = this.events || (this.events = new WeakMap());
 		let events = new Map();
 		map.set(emitter, events);
 		return events;
+	}
+
+	/**
+	 * creates a new Map for the emitter
+	 * @param {Emitter} emitter
+	 * @return {Map}
+	 */
+	static removeEventMap(emitter){
+		let map = this.events || (this.events = new WeakMap());
+		if(map.has(emitter))
+			map.delete(emitter);
 	}
 
 	/**
@@ -49,90 +71,30 @@ export default class Emitter{
 
 	/**
 	 * listens for an event of this emitter
-	 * @param  {RegExp|String|Event} type
-	 * @param  {Function} func - the function to be called when the event fires
-	 * @param  {*} [ctx] - the context to run the function under
-	 * @param  {Boolean} [removable=true] - whether this listener can be removed without force
+	 * @param  {RegExp|String|Event} eventType
+	 * @param  {Function} listener - the function to be called when the event fires
+	 * @param  {Object|Boolean|Number} [context] - the context to run the function under
+	 * @param  {Boolean|Number|Object} [isStatic=true] - whether this listener can be removed without force
+	 * @param  {Number|Boolean|Object} [times=Infinity] the times this listener can be called before it removes it self
 	 * @return {this}
 	 */
-	on(type, func, ctx, removable = true){
-		if(isNil(type))
-			throw new Error('Emitter.on requires a String or a RegExp as the first argument');
+	on(eventType, listener, context, isStatic, times){
+		if(!isString(eventType) && !isRegExp(eventType) && !(eventType instanceof Event))
+			throw new Error('Emitter.on requires a String, Event or RegExp as the first argument');
 
-		if(!isFunction(func))
+		if(!isFunction(listener))
 			throw new Error('Emitter.on requires a function as the second argument');
 
-		let eventMap = this.eventMap;
-		if(!eventMap)
-			eventMap = Emitter.createEventMap(this);
-
-		if(type instanceof Event)
-			type = type.type;
-
-		if(!eventMap.has(type))
-			eventMap.set(type, []);
-
-		eventMap.get(type).push({
-			func: func,
-			ctx: ctx,
-			once: false,
-			removable: removable
-		});
-		return this;
-	}
-
-	/**
-	 * binds a listener that removes its self once the event is fired
-	 * @param  {RegExp|String|Event} type
-	 * @param  {Function} func
-	 * @param  {*} [ctx] - the context to run the functions under
-	 * @return {this}
-	 *
-	 * TODO: make once() accept a "removable" flag
-	 */
-	once(type, func, ctx){
-		if(isNil(type))
-			throw new Error('Emitter.once requires a String or a RegExp as the first argument');
-
-		if(!isFunction(func))
-			throw new Error('Emitter.once requires a function as the second argument');
+		isStatic = findInArgArray(arguments, isBoolean, 2, false);
+		times = findInArgArray(arguments, n => Number.isFinite(n) || n === Infinity, 2, Infinity);
+		context = findInArgArray(arguments, o => {
+			console.log(typeof o);
+			return typeof o === 'object';
+		}, 2, undefined);
 
 		let eventMap = this.eventMap;
 		if(!eventMap)
 			eventMap = Emitter.createEventMap(this);
-
-		if(type instanceof Event)
-			type = type.type;
-
-		if(!eventMap.has(type))
-			eventMap.set(type, []);
-
-		eventMap.get(type).push({
-			func: func,
-			ctx: ctx,
-			once: true,
-			removable: true
-		});
-		return this;
-	}
-
-	/**
-	 * removes a listener
-	 * NOTE: this dose not take a "force" flag, since to remove a listener through this method you have to provide the exact type, function, and ctx
-	 * @param  {RegExp|String|Event} type
-	 * @param  {Function} func - this has to be the exact function that was bound
-	 * @param  {*} [ctx] - this has to be the exact context that was bound with the listener
-	 * @return {this}
-	 *
-	 * TODO add force flag to Emitter.off
-	 */
-	off(type, func, ctx){
-		let eventMap = this.eventMap;
-		let eventType = type;
-
-		// if there is not event map, just exit
-		if(!eventMap)
-			return this;
 
 		if(eventType instanceof Event)
 			eventType = eventType.type;
@@ -140,11 +102,60 @@ export default class Emitter{
 		if(!eventMap.has(eventType))
 			eventMap.set(eventType, []);
 
+		// add the listener to the array
+		eventMap.get(eventType).push({
+			func: listener,
+			ctx: context,
+			times: times,
+			isStatic: isStatic
+		});
+		return this;
+	}
+
+	/**
+	 * binds a listener that removes its self once the event is fired
+	 * @param  {RegExp|String|Event} eventType
+	 * @param  {Function} listener
+	 * @param  {Object|Boolean} [context] - the context to run the functions under
+	 * @param  {Boolean|Object} [isStatic = false] - whether this listener can be removed without using force
+	 * @return {this}
+	 */
+	once(eventType, listener, context, isStatic){
+		return this.on(eventType, listener, 1, context, isStatic);
+	}
+
+	/**
+	 * removes a listener
+	 * @param  {RegExp|String|Event} eventType
+	 * @param  {Function} listener - this has to be the exact function that was bound
+	 * @param  {*|Boolean} [context] - this has to be the exact context that was bound with the listener
+	 * @param  {Boolean} [force=false] - whether to force remove the listeners
+	 * @return {this}
+	 */
+	off(eventType, listener, context, force){
+		if(eventType == null)
+			throw new Error('Emitter.off requires a String or a RegExp as the first argument');
+
+		if(!isFunction(listener))
+			throw new Error('Emitter.off requires a function as the second argument');
+
+		force = findInArgArray(arguments, isBoolean, 2, false);
+		context = findInArgArray(arguments, o => typeof o === 'object', 2, undefined);
+
+		if(eventType instanceof Event)
+			eventType = eventType.type;
+
+		let eventMap = this.eventMap;
+		if(!eventMap)
+			return this; // if there is not event map, just exit
+
+		if(!eventMap.has(eventType))
+			eventMap.set(eventType, []);
+
 		if(isString(eventType)){
 			let listeners = eventMap.get(eventType);
-			listeners.forEach((listener, i) => {
-				// done bother about force in this situation, because the user provied the exact type, function, and ctx
-				if(listener.func === func && ctx === listener.ctx)
+			listeners.forEach((listenerData, i) => {
+				if(listenerData.func === listener && listenerData.ctx === context && (listenerData.isStatic? force : true))
 					listeners.splice(i,1);
 			});
 
@@ -156,8 +167,8 @@ export default class Emitter{
 			eventMap.forEach((listeners, listenersEventType) => {
 				// if the regexp flags and source match then remove the listeners
 				if(isRegExp(listenersEventType) && isRegExpEqual(eventType, listenersEventType)){
-					listeners.forEach((listener, i) => {
-						if(listener.func === func && ctx === listener.ctx)
+					listeners.forEach((listenerData, i) => {
+						if(listenerData.func === listener && listenerData.ctx === context && (listenerData.isStatic? force : true))
 							listeners.splice(i,1);
 					});
 
@@ -173,11 +184,11 @@ export default class Emitter{
 
 	/**
 	 * fires ad event on this emitter
-	 * @param {String|Event} type
+	 * @param {String|Event} eventType
 	 * @param {...*} args - the arguments to be passed to the listeners. these will be ignored if an Event was passed in
 	 * @return {this}
 	 */
-	emit(type, ...args){
+	emit(eventType, ...args){
 		if(this.suppressEvents) return;
 		let eventMap = this.eventMap;
 		let event;
@@ -187,12 +198,19 @@ export default class Emitter{
 			return this;
 
 		// if its an event use the events type
-		if(type instanceof Event)
-			event = type;
-		else
-			event = new Event(type, this, args);
+		if(eventType instanceof Event){
+			event = eventType;
 
-		let listenerArgs = Array.from(event.data || args).concat([event]);
+			// if the event dose not have a target set it to this emitter
+			if(event.target === undefined)
+				event.target = this;
+		}
+		else if(isString(eventType))
+			event = new Event(eventType, args, this);
+		else
+			throw new Error('Emitter.emit requires a String or Event as the first argument');
+
+		let listenerArgs = Array.from(event.args).concat([event]);
 		eventMap.forEach((listeners, listenersEventType) => {
 			if(
 				// if they are both strings and they match
@@ -204,7 +222,7 @@ export default class Emitter{
 			){
 				listeners.forEach(listener => {
 					listener.func.apply(listener.ctx, listenerArgs);
-					if(listener.once)
+					if(--listener.times <= 0)
 						this.off(event.type, listener.func, listener.ctx, true);
 				});
 			}
@@ -214,19 +232,18 @@ export default class Emitter{
 	}
 
 	/**
-	 * removes all events of "type"
+	 * removes all events of "eventType"
 	 * NOTE: passing no arguments will clean all listeners
 	 * NOTE: passing a single boolean will clear all listens and act as the force flag
-	 * @param {RegExp|String|Event|Boolean} [type] - the type of event
+	 * @param {RegExp|String|Event|Boolean} [eventType] - the type of event
 	 * @param {Boolean} [force = false] - whether to force remove the listeners
 	 * @param {Boolean} [useRegExp = true] - whether to use the RegExp to test other types
 	 * @return {this}
 	 */
-	clear(type, force = false, useRegExp = true){
+	clear(eventType, force = false, useRegExp = true){
 		let eventMap = this.eventMap;
-		let eventType = type;
 
-		// if there is not event map, just exit
+		// if there is no event map, just exit
 		if(!eventMap)
 			return this;
 
@@ -234,7 +251,7 @@ export default class Emitter{
 			clearListeners(eventMap, eventType, force);
 		}
 		else if(eventType instanceof Event){
-			this.clear(eventType.type, useRegExp, force);
+			clearListeners(eventMap, eventType.type, force);
 		}
 		else if(isRegExp(eventType)){
 			Array.from(eventMap).map(a => a[0]).forEach(listenersEventType => {
@@ -249,11 +266,13 @@ export default class Emitter{
 			})
 		}
 		else if(arguments.length === 1 && eventType === true){
+			// remove all listeners
 			eventMap.clear();
 		}
-		else if(eventType === false || eventType === undefined && arguments.length <= 1){
+		else if((eventType === false || eventType === undefined) && arguments.length <= 1){
+			// remove all listeners that are not static
 			eventMap.forEach((listeners, type) => {
-				listeners.filter(listener => listener.removable).forEach(listener => {
+				listeners.filter(listener => !listener.isStatic).forEach(listener => {
 					listeners.splice(listeners.indexOf(listener), 1);
 				});
 
@@ -268,13 +287,12 @@ export default class Emitter{
 
 	/**
 	 * returns the number of listeners bound to the event
-	 * @param  {RegExp|String|Event} [type]
+	 * @param  {RegExp|String|Event} [eventType]
 	 * @param {Boolean} [useRegExp] - whether to use the RegExp to test other types
 	 * @return {Boolean}
 	 */
-	count(type, useRegExp = true){
+	count(eventType, useRegExp = true){
 		let eventMap = this.eventMap;
-		let eventType = type;
 
 		// if there is not event map, just exit
 		if(!eventMap)
@@ -289,19 +307,31 @@ export default class Emitter{
 		else if(isRegExp(eventType)){
 			let total = 0;
 			eventMap.forEach((listeners, listenersEventType) => {
-				if(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType))
+				if(
+					// if the string matches the regex
+					(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType)) ||
+					// if the regex(s) match
+					(isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, eventType))
+				){
 					total += listeners.length;
-				else if(isRegExpEqual(listenersEventType, eventType))
-					total += listeners.length;
+				}
 			});
 			return total;
 		}
 		else{
 			let total = 0;
-			eventMap.forEach((listeners, eventType) => {
+			eventMap.forEach(listeners => {
 				total += listeners.length;
 			});
 			return total;
 		}
+	}
+
+	/**
+	 * cleans up the emitter for GC
+	 */
+	dispose(){
+		Emitter.removeEventMap(this);
+		return this;
 	}
 }
