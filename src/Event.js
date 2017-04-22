@@ -1,4 +1,4 @@
-import isString from 'lodash/isstring';
+import isString from 'lodash.isstring';
 
 /**
  * @classdesc the basic event class
