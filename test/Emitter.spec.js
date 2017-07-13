@@ -3,14 +3,14 @@ import Event from '../src/Event';
 import {isRegExpEqual} from '../src/utils';
 
 function expectListenerCount(emitter, type, count, useRegExp = true){
-	expect(emitter).to.be.defined;
+	expect(emitter).to.exist;
 	expect(emitter.eventMap).to.be.an.instanceof(Map);
 	if(typeof type === 'string'){
 		if(count === 0) {
 			expect(emitter.eventMap.size).to.equal(0);
 		}
 		else {
-			expect(emitter.eventMap.get(type)).to.be.defined;
+			expect(emitter.eventMap.get(type)).to.exist;
 			if(emitter.eventMap.get(type))
 				expect(emitter.eventMap.get(type)).to.have.lengthOf(count);
 		}

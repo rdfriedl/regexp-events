@@ -2,12 +2,12 @@ const path = require('path');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const babel = require('rollup-plugin-babel');
-const {banner, moduleId, moduleName} = require('./config');
+const {banner, amd, moduleName} = require('./config');
 
 module.exports = {
 	entry: 'test/index.js',
 	format: 'iife',
-	moduleId,
+	amd,
 	moduleName,
 	banner,
 	plugins: [

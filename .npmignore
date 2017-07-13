@@ -1,0 +1,6 @@
+\.circleci/
+\.idea/
+
+config/
+coverage/
+node_modules/

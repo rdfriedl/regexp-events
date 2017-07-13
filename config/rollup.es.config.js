@@ -1,11 +1,11 @@
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
-const {banner, moduleId, moduleName, entry} = require('./config');
+const {banner, amd, moduleName, entry} = require('./config');
 
 module.exports = {
 	entry,
 	format: 'es',
-	moduleId,
+	amd,
 	moduleName,
 	banner,
 	plugins: [

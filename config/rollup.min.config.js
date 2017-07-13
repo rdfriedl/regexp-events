@@ -2,12 +2,12 @@ const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const uglify = require('rollup-plugin-uglify');
 const babel = require('rollup-plugin-babel');
-const {minBanner, keepBanner, moduleId, moduleName, entry} = require('./config');
+const {minBanner, keepBanner, amd, moduleName, entry} = require('./config');
 
 module.exports = {
 	entry,
 	format: 'cjs',
-	moduleId,
+	amd,
 	moduleName,
 	banner: minBanner,
 	plugins: [

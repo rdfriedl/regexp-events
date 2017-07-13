@@ -20,7 +20,7 @@ function keepBanner(node, comment) {
 
 module.exports = {
 	entry: 'src/index.js',
-	moduleId: 'regexp-events',
+	amd: {id: 'regexp-events'},
 	moduleName: 'RegExpEvents',
 	banner,
 	minBanner,

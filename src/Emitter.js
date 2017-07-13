@@ -88,7 +88,6 @@ export default class Emitter{
 		isStatic = findInArgArray(arguments, isBoolean, 2, false);
 		times = findInArgArray(arguments, n => Number.isFinite(n) || n === Infinity, 2, Infinity);
 		context = findInArgArray(arguments, o => {
-			console.log(typeof o);
 			return typeof o === 'object';
 		}, 2, undefined);
 
