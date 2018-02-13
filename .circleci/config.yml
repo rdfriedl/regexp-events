@@ -1,72 +1,73 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
-  test:
+  install:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:latest-browsers
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+      - image: circleci/node:latest
 
     working_directory: ~/repo
 
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          - node_modules-{{ checksum "package.json" }}
 
-      - run: npm install
+      - run:
+          name: Install dependancies
+          command: npm install
 
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: node_modules-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm run test
+  test:
+    docker:
+      - image: circleci/node:latest-browsers
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - node_modules-{{ checksum "package.json" }}
+
+      - run:
+          name: Run Tests
+          command: npm run test
 
   build:
     docker:
-      - image: circleci/node:latest-browsers
+      - image: circleci/node:latest
 
     working_directory: ~/repo
 
+    environment:
+      - NODE_ENV: "production"
+
     steps:
       - checkout
+
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
-
-      - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          - node_modules-{{ checksum "package.json" }}
 
       - run:
-          environment:
-            - NODE_ENV: "production"
+          name: Build
           command: npm run build
 
 workflows:
   version: 2
-
   test-and-build:
     jobs:
-      - test
+      - install
+      - test:
+          requires:
+            - install
       - build:
-        requires:
-          - test
+          requires:
+            - install
+            - test
