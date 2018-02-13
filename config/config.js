@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json')));
+const fs = require("fs");
+const path = require("path");
+const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../package.json")));
 
 const banner = `/**
  * regexp-events v${pkg.version}
@@ -19,10 +19,10 @@ function keepBanner(node, comment) {
 }
 
 module.exports = {
-	entry: 'src/index.js',
-	amd: {id: 'regexp-events'},
-	moduleName: 'RegExpEvents',
+	entry: "src/index.js",
+	amd: { id: "regexp-events" },
+	moduleName: "RegExpEvents",
 	banner,
 	minBanner,
-	keepBanner
+	keepBanner,
 };

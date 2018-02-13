@@ -1,2 +1,2 @@
-import 'babel-polyfill';
-import './Emitter.spec';
+import "babel-polyfill";
+import "./Emitter.spec";

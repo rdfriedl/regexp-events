@@ -1,20 +1,18 @@
-export function clearListeners(eventMap, eventType, force){
-	if(force) {
+export function clearListeners(eventMap, eventType, force) {
+	if (force) {
 		eventMap.delete(eventType);
-	}
-	else {
+	} else {
 		let listeners = eventMap.get(eventType);
 		listeners.filter(listener => !listener.isStatic).forEach((listener, i) => {
 			listeners.splice(listeners.indexOf(listener), 1);
 		});
 
 		// if there are not listeners left, remove the array
-		if(listeners.length === 0)
-			eventMap.delete(eventType);
+		if (listeners.length === 0) eventMap.delete(eventType);
 	}
 }
 
-export function isRegExpEqual(r1, r2){
+export function isRegExpEqual(r1, r2) {
 	return (
 		r1 instanceof RegExp &&
 		r2 instanceof RegExp &&
