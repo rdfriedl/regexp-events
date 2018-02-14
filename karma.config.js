@@ -3,13 +3,12 @@ const rollupConfig = require("./config/rollup.test.config");
 
 module.exports = function(config) {
 	config.set({
-		frameworks: ["source-map-support", "mocha", "sinon-chai", "phantomjs-shim"],
+		frameworks: ["source-map-support", "mocha", "sinon-chai"],
 
 		plugins: [
 			"karma-chrome-launcher",
 			"karma-firefox-launcher",
 			"karma-phantomjs-launcher",
-			"karma-phantomjs-shim",
 
 			"karma-mocha",
 			"karma-mocha-reporter",

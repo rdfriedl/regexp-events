@@ -1,4 +1,3 @@
-const path = require("path");
 const resolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
 const babel = require("rollup-plugin-babel");
@@ -17,9 +16,18 @@ module.exports = {
 		}),
 		babel({
 			exclude: "node_modules/**",
-			presets: ["es2015-rollup"],
-			plugins: ["istanbul"],
+			presets: [
+				[
+					"env",
+					{
+						modules: false,
+						useBuiltIns: true,
+					},
+				],
+			],
+			plugins: ["external-helpers", "istanbul"],
 			sourceMaps: true,
+			babelrc: false,
 		}),
 	],
 	sourceMap: "inline",

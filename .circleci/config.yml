@@ -1,60 +1,96 @@
 version: 2
 jobs:
-  install:
+  test-node_6:
     docker:
-      - image: circleci/node:latest
-
+      - image: circleci/node:6
     working_directory: ~/repo
-
     steps:
       - checkout
-
       - restore_cache:
           keys:
-          - node_modules-{{ checksum "package.json" }}
-
+          - node_modules-node_6-{{ checksum "package.json" }}
       - run:
           name: Install dependancies
           command: npm install
-
       - save_cache:
           paths:
             - node_modules
-          key: node_modules-{{ checksum "package.json" }}
-
-  test:
-    docker:
-      - image: circleci/node:latest-browsers
-
-    working_directory: ~/repo
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-          - node_modules-{{ checksum "package.json" }}
-
+          key: node_modules-node_6-{{ checksum "package.json" }}
       - run:
           name: Run Tests
-          command: npm run test
+          command: npm run test:node
+
+  test-node_8:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_8-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_8-{{ checksum "package.json" }}
+      - run:
+          name: Run Tests
+          command: npm run test:node
+
+  test-node_latest:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Run Tests
+          command: npm run test:node
+
+  test-browsers:
+    docker:
+      - image: circleci/node:latest-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Run Tests
+          command: npm run test:karma
 
   build:
     docker:
       - image: circleci/node:latest
-
     working_directory: ~/repo
-
     environment:
       - NODE_ENV: "production"
-
     steps:
       - checkout
-
       - restore_cache:
           keys:
-          - node_modules-{{ checksum "package.json" }}
-
+          - node_modules-node_latest-{{ checksum "package.json" }}
       - run:
           name: Build
           command: npm run build
@@ -63,11 +99,13 @@ workflows:
   version: 2
   test-and-build:
     jobs:
-      - install
-      - test:
-          requires:
-            - install
+      - test-node_6
+      - test-node_8
+      - test-node_latest
+      - test-browsers
       - build:
           requires:
-            - install
-            - test
+            - test-node_6
+            - test-node_8
+            - test-node_latest
+            - test-browsers

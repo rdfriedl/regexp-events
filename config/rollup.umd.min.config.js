@@ -19,6 +19,7 @@ module.exports = {
 			exclude: "node_modules/**",
 			presets: ["es2015-rollup"],
 			sourceMaps: true,
+			babelrc: false,
 		}),
 		uglify({
 			output: {
