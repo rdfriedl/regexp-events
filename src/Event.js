@@ -1,5 +1,3 @@
-import isString from "lodash.isstring";
-
 /**
  * @classdesc the basic event class
  * @class Event
@@ -12,7 +10,7 @@ export default class Event {
 	 * @return {Event}
 	 */
 	constructor(type, args, target) {
-		if (!isString(type)) throw new Error("Event.type has to be a string");
+		if (typeof type !== "string") throw new Error("Event.type has to be a string");
 
 		/**
 		 * the type of event

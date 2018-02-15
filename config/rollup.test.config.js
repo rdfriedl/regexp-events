@@ -12,7 +12,7 @@ module.exports = {
 	plugins: [
 		resolve(),
 		commonjs({
-			include: "node_modules/**",
+			include: ["node_modules/**", "dist/**"],
 		}),
 		babel({
 			exclude: "node_modules/**",
@@ -20,8 +20,8 @@ module.exports = {
 				[
 					"env",
 					{
-						modules: false,
 						useBuiltIns: true,
+						modules: false,
 					},
 				],
 			],

@@ -1,2 +1,5 @@
-import "core-js/shim";
-import "./Emitter.spec";
+import "./setup";
+
+import "./scenarios/source";
+import "./scenarios/es-bundle";
+import "./scenarios/cjs-bundle";

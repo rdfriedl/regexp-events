@@ -1,5 +1,37 @@
 version: 2
 jobs:
+  install:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_latest-{{ checksum "package.json" }}
+
+  build:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    environment:
+      - NODE_ENV: "production"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Build
+          command: npm run build
+
   test-node_4:
     docker:
       - image: circleci/node:4
@@ -100,34 +132,26 @@ jobs:
           name: Run Tests
           command: npm run test:karma
 
-  build:
-    docker:
-      - image: circleci/node:latest
-    working_directory: ~/repo
-    environment:
-      - NODE_ENV: "production"
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - node_modules-node_latest-{{ checksum "package.json" }}
-      - run:
-          name: Build
-          command: npm run build
-
 workflows:
   version: 2
   test-and-build:
     jobs:
-      - test-node_4
-      - test-node_6
-      - test-node_8
-      - test-node_latest
-      - test-browsers
+      - install
       - build:
           requires:
-            - test-node_4
-            - test-node_6
-            - test-node_8
-            - test-node_latest
-            - test-browsers
+            - install
+      - test-node_4:
+          requires:
+            - build
+      - test-node_6:
+          requires:
+            - build
+      - test-node_8:
+          requires:
+            - build
+      - test-node_latest:
+          requires:
+            - build
+      - test-browsers:
+          requires:
+            - build
