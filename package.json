@@ -7,7 +7,9 @@
   "module": "dist/regexp-events.es.js",
   "scripts": {
     "precommit": "pretty-quick --staged",
-    "prepublishOnly": "npm run test && npm run build",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "commit": "commit",
+    "prepublishOnly": "npm run build",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "npm-run-all --parallel build:**:*",
@@ -40,6 +42,9 @@
   "author": "rdfriedl",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^6.1.0",
+    "@commitlint/config-conventional": "^6.1.0",
+    "@commitlint/prompt-cli": "^6.1.0",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-istanbul": "^4.1.4",
