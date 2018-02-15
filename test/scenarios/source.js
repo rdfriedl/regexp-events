@@ -1,4 +1,3 @@
-import "../setup";
 import EmitterTestSuite from "../Emitter.spec";
 import EventTestSuite from "../Event.spec";
 import Emitter from "../../src/Emitter";

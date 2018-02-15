@@ -28,7 +28,7 @@ module.exports = function(config) {
 			},
 		},
 
-		files: ["test/index.js"],
+		files: ["node_modules/core-js/client/shim.min.js", "test/index.js"],
 
 		preprocessors: {
 			"test/index.js": ["rollup"],
