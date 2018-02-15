@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="">
+  <title data-ice="title">Test | RegExp Events</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A simple RegExp event emitter"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="RegExp Events"><meta property="twitter:description" content="A simple RegExp event emitter"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/rdfriedl/regexp-events"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Emitter.js~Emitter.html">Emitter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Event.js~Event.html">Event</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-clearListeners">clearListeners</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isRegExpEqual">isRegExpEqual</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1>Test</h1>
+<table class="test-summary">
+  <thead>
+    <tr>
+      <td class="test-description">Description</td>
+      <td class="test-target">Identifier</td>
+    </tr>
+  </thead>
+
+  <tbody data-ice="tests"><tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="0">
+  <td data-ice="testDescription" style="padding-left: 10px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber33"><p>Emitter</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber39"><p>on</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber40"><p>(String, Function)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber50"><p>(String, Function, context)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber60"><p>(String, Function, context, times)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber70"><p>(String, Function, context, times, isStatic)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber80"><p>(String, Function, context, isStatic)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber90"><p>(String, Function, context, isStatic, times)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber101"><p>(String, Function, isStatic)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber110"><p>(String, Function, isStatic, context)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber120"><p>(String, Function, isStatic, times)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber129"><p>(String, Function, isStatic, context, times)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber139"><p>(String, Function, isStatic, times, context)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber150"><p>(String, Function, times)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber159"><p>(String, Function, times, context)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber169"><p>(String, Function, times, isStatic)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber178"><p>(String, Function, times, context, isStatic)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber188"><p>(String, Function, times, isStatic, context)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber199"><p>(RegExp, Function)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber208"><p>(Event, Function)</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber216"><p>() throws if there is no event type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber222"><p>(Number|Null|Function) throws if the eventType is not a String, Event or RegExp</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber236"><p>(String) throws if listener function is no provided</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber242"><p>(String, Null) throws if listener is not a function</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber249"><p>off</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber250"><p>only removes the first listener that matches</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber257"><p>(String, Function) removes listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber262"><p>(String, Function) dose not remove static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber268"><p>(String, Function, context) removes listener with context</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber275"><p>(String, Function) dost not remove listener with different context</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber284"><p>(Event, Function) removes listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber290"><p>(RegExp, Function) removes listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber297"><p>(String, Function, force=true) removes static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber302"><p>(String, Function, force=false) dose not remove static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber308"><p>(String, Function, context, force=true) removes static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber314"><p>(String, Function, context, force=false) dose not remove static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber321"><p>(String, Function, force=true, context) removes static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber327"><p>(String, Function, force=false, context) dose not remove static listener</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber335"><p>clear</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber336"><p>() removes all listeners</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber345"><p>() dose not remove static listeners</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber352"><p>(force=true) removes static listeners</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber359"><p>(force=false) dose not remove static listeners</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber366"><p>(String) removes all listeners of type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber373"><p>(String, force=true) removes static listeners of type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber380"><p>(String, force=false) dose not remove static listeners of type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber387"><p>(Event) removes all listeners of event type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber394"><p>(RegExp) removes listeners with matching String or same RegExp</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber402"><p>(RegExp, force=false, useRegexp=false) only removes matching RegExp</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber410"><p>(RegExp, force=false, useRegexp=false) takes RegExp flags into account when comparing regexes</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber419"><p>count</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber420"><p>() returns total number of all listeners on the emitter</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber426"><p>(String) returns number of listeners of that type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber433"><p>(Event) returns number of listeners of Event.type</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber440"><p>(RegExp) returns number of listeners that match the RegExp</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber450"><p>(RegExp, useRegExp=false) returns number of listeners that have a identical RegExp</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber459"><p>once</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber460"><p>removes listener after the event is fired</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Emitter.spec.js.html#lineNumber468"><p>emit</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber469"><p>throws error if eventType is not a string</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber476"><p>(String) calls listeners</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber482"><p>(String, args...) calls listeners with arguments</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber488"><p>(String, args...) passes the Event as the last arguments</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber495"><p>(Event) calls listeners</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber501"><p>(Event) emits the Event that is passed in</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber508"><p>(Event) calls listeners with Event.args</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber515"><p>(Event) sets Event.target if its not already set</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber528"><p>dost not fire the event if Emitter.suppressEvents == true</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Emitter.spec.js.html#lineNumber535"><p>removes listener after calling is the correct number of times</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="0">
+  <td data-ice="testDescription" style="padding-left: 10px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Event.spec.js.html#lineNumber2"><p>Event</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="1">
+  <td data-ice="testDescription" style="padding-left: 20px"><span data-ice="testInterfaceToggle" class="toggle closed"></span><span><a href="test-file/test/Event.spec.js.html#lineNumber3"><p>constructor</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Event.spec.js.html#lineNumber4"><p>should throw an error if type is not a string</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Event.spec.js.html#lineNumber22"><p>(String) should return an Event</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+
+<tr class="test-interface" data-ice="testInterface" style="display: none;" data-test-depth="2">
+  <td data-ice="testDescription" style="padding-left: 30px"><span><a href="test-file/test/Event.spec.js.html#lineNumber26"><p>should set args to an empty array if not passed in</p>
+</a></span></td>
+  <td data-ice="testTarget" class="test-target">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

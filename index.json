@@ -1,0 +1,2462 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/Emitter.js",
+    "content": "import Event from \"./Event\";\nimport { clearListeners, isRegExpEqual } from \"./utils\";\nimport isString from \"lodash.isstring\";\nimport isFunction from \"lodash.isfunction\";\nimport isRegExp from \"lodash.isregexp\";\n\nfunction isBoolean(v) {\n\treturn v === true || v === false;\n}\n\nfunction findInArgArray(args, fn, start, df) {\n\tfor (let i = 0; i < args.length - start; i++) if (fn(args[start + i])) return args[start + i];\n\n\treturn df;\n}\n\n/**\n * a simple event emitter\n */\nexport default class Emitter {\n\tconstructor() {\n\t\t/**\n\t\t * whether to suppress all events on this emitter\n\t\t * @type {Boolean}\n\t\t */\n\t\tthis.suppressEvents = false;\n\t}\n\n\t/**\n\t * returns the Map that is used to store events for emitters\n\t * @param {Emitter} emitter\n\t * @return {WeakMap}\n\t */\n\tstatic getEventMap(emitter) {\n\t\tlet map = this.events || (this.events = new WeakMap());\n\t\treturn map.get(emitter);\n\t}\n\n\t/**\n\t * creates a new Map for the emitter\n\t * @param {Emitter} emitter\n\t * @return {Map}\n\t */\n\tstatic createEventMap(emitter) {\n\t\tlet map = this.events || (this.events = new WeakMap());\n\t\tlet events = new Map();\n\t\tmap.set(emitter, events);\n\t\treturn events;\n\t}\n\n\t/**\n\t * creates a new Map for the emitter\n\t * @param {Emitter} emitter\n\t * @return {Map}\n\t */\n\tstatic removeEventMap(emitter) {\n\t\tlet map = this.events || (this.events = new WeakMap());\n\t\tif (map.has(emitter)) map.delete(emitter);\n\t}\n\n\t/**\n\t * returns the Map used to store events\n\t * @return {Map}\n\t */\n\tget eventMap() {\n\t\treturn Emitter.getEventMap(this);\n\t}\n\n\t/**\n\t * listens for an event of this emitter\n\t * @param  {RegExp|String|Event} eventType\n\t * @param  {Function} listener - the function to be called when the event fires\n\t * @param  {Object|Boolean|Number} [context] - the context to run the function under\n\t * @param  {Boolean|Number|Object} [isStatic=true] - whether this listener can be removed without force\n\t * @param  {Number|Boolean|Object} [times=Infinity] the times this listener can be called before it removes it self\n\t * @return {this}\n\t */\n\ton(eventType, listener, context, isStatic, times) {\n\t\tif (!isString(eventType) && !isRegExp(eventType) && !(eventType instanceof Event))\n\t\t\tthrow new Error(\"Emitter.on requires a String, Event or RegExp as the first argument\");\n\n\t\tif (!isFunction(listener)) throw new Error(\"Emitter.on requires a function as the second argument\");\n\n\t\tisStatic = findInArgArray(arguments, isBoolean, 2, false);\n\t\ttimes = findInArgArray(arguments, n => Number.isFinite(n) || n === Infinity, 2, Infinity);\n\t\tcontext = findInArgArray(\n\t\t\targuments,\n\t\t\to => {\n\t\t\t\treturn typeof o === \"object\";\n\t\t\t},\n\t\t\t2,\n\t\t\tundefined,\n\t\t);\n\n\t\tlet eventMap = this.eventMap;\n\t\tif (!eventMap) eventMap = Emitter.createEventMap(this);\n\n\t\tif (eventType instanceof Event) eventType = eventType.type;\n\n\t\tif (!eventMap.has(eventType)) eventMap.set(eventType, []);\n\n\t\t// add the listener to the array\n\t\teventMap.get(eventType).push({\n\t\t\tfunc: listener,\n\t\t\tctx: context,\n\t\t\ttimes: times,\n\t\t\tisStatic: isStatic,\n\t\t});\n\t\treturn this;\n\t}\n\n\t/**\n\t * binds a listener that removes its self once the event is fired\n\t * @param  {RegExp|String|Event} eventType\n\t * @param  {Function} listener\n\t * @param  {Object|Boolean} [context] - the context to run the functions under\n\t * @param  {Boolean|Object} [isStatic = false] - whether this listener can be removed without using force\n\t * @return {this}\n\t */\n\tonce(eventType, listener, context, isStatic) {\n\t\treturn this.on(eventType, listener, 1, context, isStatic);\n\t}\n\n\t/**\n\t * removes a listener\n\t * @param  {RegExp|String|Event} eventType\n\t * @param  {Function} listener - this has to be the exact function that was bound\n\t * @param  {*|Boolean} [context] - this has to be the exact context that was bound with the listener\n\t * @param  {Boolean} [force=false] - whether to force remove the listeners\n\t * @return {this}\n\t */\n\toff(eventType, listener, context, force) {\n\t\tif (eventType == null) throw new Error(\"Emitter.off requires a String or a RegExp as the first argument\");\n\n\t\tif (!isFunction(listener)) throw new Error(\"Emitter.off requires a function as the second argument\");\n\n\t\tforce = findInArgArray(arguments, isBoolean, 2, false);\n\t\tcontext = findInArgArray(arguments, o => typeof o === \"object\", 2, undefined);\n\n\t\tif (eventType instanceof Event) eventType = eventType.type;\n\n\t\tlet eventMap = this.eventMap;\n\t\tif (!eventMap) return this; // if there is not event map, just exit\n\n\t\tif (!eventMap.has(eventType)) eventMap.set(eventType, []);\n\n\t\tif (isString(eventType)) {\n\t\t\tlet listeners = eventMap.get(eventType);\n\t\t\tlisteners.forEach((listenerData, i) => {\n\t\t\t\tif (listenerData.func === listener && listenerData.ctx === context && (listenerData.isStatic ? force : true))\n\t\t\t\t\tlisteners.splice(i, 1);\n\t\t\t});\n\n\t\t\t// remove the listener array if there are no listeners left\n\t\t\tif (listeners.length === 0) eventMap.delete(eventType);\n\t\t} else if (isRegExp(eventType)) {\n\t\t\teventMap.forEach((listeners, listenersEventType) => {\n\t\t\t\t// if the regexp flags and source match then remove the listeners\n\t\t\t\tif (isRegExp(listenersEventType) && isRegExpEqual(eventType, listenersEventType)) {\n\t\t\t\t\tlisteners.forEach((listenerData, i) => {\n\t\t\t\t\t\tif (\n\t\t\t\t\t\t\tlistenerData.func === listener &&\n\t\t\t\t\t\t\tlistenerData.ctx === context &&\n\t\t\t\t\t\t\t(listenerData.isStatic ? force : true)\n\t\t\t\t\t\t)\n\t\t\t\t\t\t\tlisteners.splice(i, 1);\n\t\t\t\t\t});\n\n\t\t\t\t\t// remove the listener array if there are no listeners left\n\t\t\t\t\tif (listeners.length === 0) eventMap.delete(listenersEventType);\n\t\t\t\t}\n\t\t\t});\n\t\t}\n\n\t\treturn this;\n\t}\n\n\t/**\n\t * fires ad event on this emitter\n\t * @param {String|Event} eventType\n\t * @param {...*} args - the arguments to be passed to the listeners. these will be ignored if an Event was passed in\n\t * @return {this}\n\t */\n\temit(eventType, ...args) {\n\t\tif (this.suppressEvents) return;\n\t\tlet eventMap = this.eventMap;\n\t\tlet event;\n\n\t\t// if there is not event map, just exit\n\t\tif (!eventMap) return this;\n\n\t\t// if its an event use the events type\n\t\tif (eventType instanceof Event) {\n\t\t\tevent = eventType;\n\n\t\t\t// if the event dose not have a target set it to this emitter\n\t\t\tif (event.target === undefined) event.target = this;\n\t\t} else if (isString(eventType)) event = new Event(eventType, args, this);\n\t\telse throw new Error(\"Emitter.emit requires a String or Event as the first argument\");\n\n\t\tlet listenerArgs = Array.from(event.args).concat([event]);\n\t\teventMap.forEach((listeners, listenersEventType) => {\n\t\t\tif (\n\t\t\t\t// if they are both strings and they match\n\t\t\t\t(isString(event.type) && listenersEventType === event.type) ||\n\t\t\t\t// if the listenersEventType is a RegExp and the event type is a string, see if they match\n\t\t\t\t(isString(event.type) && isRegExp(listenersEventType) && listenersEventType.test(event.type)) ||\n\t\t\t\t// if they are both RegExp see if they match\n\t\t\t\t(isRegExp(event.type) && isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, event.type))\n\t\t\t) {\n\t\t\t\tlisteners.forEach(listener => {\n\t\t\t\t\tlistener.func.apply(listener.ctx, listenerArgs);\n\t\t\t\t\tif (--listener.times <= 0) this.off(event.type, listener.func, listener.ctx, true);\n\t\t\t\t});\n\t\t\t}\n\t\t});\n\n\t\treturn this;\n\t}\n\n\t/**\n\t * removes all events of \"eventType\"\n\t * NOTE: passing no arguments will clean all listeners\n\t * NOTE: passing a single boolean will clear all listens and act as the force flag\n\t * @param {RegExp|String|Event|Boolean} [eventType] - the type of event\n\t * @param {Boolean} [force = false] - whether to force remove the listeners\n\t * @param {Boolean} [useRegExp = true] - whether to use the RegExp to test other types\n\t * @return {this}\n\t */\n\tclear(eventType, force = false, useRegExp = true) {\n\t\tlet eventMap = this.eventMap;\n\n\t\t// if there is no event map, just exit\n\t\tif (!eventMap) return this;\n\n\t\tif (isString(eventType)) {\n\t\t\tclearListeners(eventMap, eventType, force);\n\t\t} else if (eventType instanceof Event) {\n\t\t\tclearListeners(eventMap, eventType.type, force);\n\t\t} else if (isRegExp(eventType)) {\n\t\t\tArray.from(eventMap)\n\t\t\t\t.map(a => a[0])\n\t\t\t\t.forEach(listenersEventType => {\n\t\t\t\t\tif (\n\t\t\t\t\t\t// if the string matches the regex\n\t\t\t\t\t\t(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType)) ||\n\t\t\t\t\t\t// if the regex(s) match\n\t\t\t\t\t\t(isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, eventType))\n\t\t\t\t\t) {\n\t\t\t\t\t\tclearListeners(eventMap, listenersEventType, force);\n\t\t\t\t\t}\n\t\t\t\t});\n\t\t} else if (arguments.length === 1 && eventType === true) {\n\t\t\t// remove all listeners\n\t\t\teventMap.clear();\n\t\t} else if ((eventType === false || eventType === undefined) && arguments.length <= 1) {\n\t\t\t// remove all listeners that are not static\n\t\t\teventMap.forEach((listeners, type) => {\n\t\t\t\tlisteners.filter(listener => !listener.isStatic).forEach(listener => {\n\t\t\t\t\tlisteners.splice(listeners.indexOf(listener), 1);\n\t\t\t\t});\n\n\t\t\t\t// if there are no listeners left, remove the array\n\t\t\t\tif (listeners.length === 0) eventMap.delete(type);\n\t\t\t});\n\t\t}\n\n\t\treturn this;\n\t}\n\n\t/**\n\t * returns the number of listeners bound to the event\n\t * @param  {RegExp|String|Event} [eventType]\n\t * @param {Boolean} [useRegExp] - whether to use the RegExp to test other types\n\t * @return {Boolean}\n\t */\n\tcount(eventType, useRegExp = true) {\n\t\tlet eventMap = this.eventMap;\n\n\t\t// if there is not event map, just exit\n\t\tif (!eventMap) return 0;\n\n\t\tif (isString(eventType)) {\n\t\t\treturn eventMap.has(eventType) ? eventMap.get(eventType).length : 0;\n\t\t} else if (eventType instanceof Event) {\n\t\t\treturn eventMap.has(eventType.type) ? eventMap.get(eventType.type).length : 0;\n\t\t} else if (isRegExp(eventType)) {\n\t\t\tlet total = 0;\n\t\t\teventMap.forEach((listeners, listenersEventType) => {\n\t\t\t\tif (\n\t\t\t\t\t// if the string matches the regex\n\t\t\t\t\t(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType)) ||\n\t\t\t\t\t// if the regex(s) match\n\t\t\t\t\t(isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, eventType))\n\t\t\t\t) {\n\t\t\t\t\ttotal += listeners.length;\n\t\t\t\t}\n\t\t\t});\n\t\t\treturn total;\n\t\t} else {\n\t\t\tlet total = 0;\n\t\t\teventMap.forEach(listeners => {\n\t\t\t\ttotal += listeners.length;\n\t\t\t});\n\t\t\treturn total;\n\t\t}\n\t}\n\n\t/**\n\t * cleans up the emitter for GC\n\t */\n\tdispose() {\n\t\tEmitter.removeEventMap(this);\n\t\treturn this;\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/circleci/repo/src/Emitter.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "isBoolean",
+    "memberof": "src/Emitter.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Emitter.js~isBoolean",
+    "access": "public",
+    "export": false,
+    "importPath": "regexp-events/src/Emitter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "v",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "findInArgArray",
+    "memberof": "src/Emitter.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Emitter.js~findInArgArray",
+    "access": "public",
+    "export": false,
+    "importPath": "regexp-events/src/Emitter.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "args",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "fn",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "start",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "df",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "name": "Emitter",
+    "memberof": "src/Emitter.js",
+    "static": true,
+    "longname": "src/Emitter.js~Emitter",
+    "access": "public",
+    "export": true,
+    "importPath": "regexp-events/src/Emitter.js",
+    "importStyle": "Emitter",
+    "description": "a simple event emitter",
+    "lineNumber": 20,
+    "interface": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "suppressEvents",
+    "memberof": "src/Emitter.js~Emitter",
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#suppressEvents",
+    "access": "public",
+    "description": "whether to suppress all events on this emitter",
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "getEventMap",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Emitter.js~Emitter.getEventMap",
+    "access": "public",
+    "description": "returns the Map that is used to store events for emitters",
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Emitter"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "emitter",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "WeakMap"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "name": "createEventMap",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Emitter.js~Emitter.createEventMap",
+    "access": "public",
+    "description": "creates a new Map for the emitter",
+    "lineNumber": 44,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Emitter"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "emitter",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Map"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "removeEventMap",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/Emitter.js~Emitter.removeEventMap",
+    "access": "public",
+    "description": "creates a new Map for the emitter",
+    "lineNumber": 56,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Emitter"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "emitter",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Map"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "get",
+    "name": "eventMap",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#eventMap",
+    "access": "public",
+    "description": "returns the Map used to store events",
+    "lineNumber": 65,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Map"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "on",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#on",
+    "access": "public",
+    "description": "listens for an event of this emitter",
+    "lineNumber": 78,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RegExp",
+          "String",
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventType",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": "the function to be called when the event fires"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object",
+          "Boolean",
+          "Number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "context",
+        "description": "the context to run the function under"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean",
+          "Number",
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "isStatic",
+        "description": "whether this listener can be removed without force"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number",
+          "Boolean",
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "Infinity",
+        "defaultRaw": "Infinity",
+        "name": "times",
+        "description": "the times this listener can be called before it removes it self"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "once",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#once",
+    "access": "public",
+    "description": "binds a listener that removes its self once the event is fired",
+    "lineNumber": 120,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RegExp",
+          "String",
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventType",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object",
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "context",
+        "description": "the context to run the functions under"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean",
+          "Object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " false",
+        "defaultRaw": false,
+        "name": "isStatic",
+        "description": "whether this listener can be removed without using force"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "name": "off",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#off",
+    "access": "public",
+    "description": "removes a listener",
+    "lineNumber": 132,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RegExp",
+          "String",
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventType",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": "this has to be the exact function that was bound"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*",
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "context",
+        "description": "this has to be the exact context that was bound with the listener"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "force",
+        "description": "whether to force remove the listeners"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "emit",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#emit",
+    "access": "public",
+    "description": "fires ad event on this emitter",
+    "lineNumber": 184,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "eventType",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "...*"
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "args",
+        "description": "the arguments to be passed to the listeners. these will be ignored if an Event was passed in"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "clear",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#clear",
+    "access": "public",
+    "description": "removes all events of \"eventType\"\nNOTE: passing no arguments will clean all listeners\nNOTE: passing a single boolean will clear all listens and act as the force flag",
+    "lineNumber": 230,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RegExp",
+          "String",
+          "Event",
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "eventType",
+        "description": "the type of event"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " false",
+        "defaultRaw": false,
+        "name": "force",
+        "description": "whether to force remove the listeners"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": " true",
+        "defaultRaw": true,
+        "name": "useRegExp",
+        "description": "whether to use the RegExp to test other types"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "count",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#count",
+    "access": "public",
+    "description": "returns the number of listeners bound to the event",
+    "lineNumber": 277,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "RegExp",
+          "String",
+          "Event"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "eventType",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "useRegExp",
+        "description": "whether to use the RegExp to test other types"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "dispose",
+    "memberof": "src/Emitter.js~Emitter",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Emitter.js~Emitter#dispose",
+    "access": "public",
+    "description": "cleans up the emitter for GC",
+    "lineNumber": 312,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "file",
+    "name": "src/Event.js",
+    "content": "/**\n * @classdesc the basic event class\n * @class Event\n */\nexport default class Event {\n\t/**\n\t * @param  {String} type - the type of event, this can be anything, but its a good idea just to make it a string\n\t * @param  {Emitter} target - the emitter that is firing this event\n\t * @param  {Array} args - an array of arguments that is used on the listener functions\n\t * @return {Event}\n\t */\n\tconstructor(type, args, target) {\n\t\tif (typeof type !== \"string\") throw new Error(\"Event.type has to be a string\");\n\n\t\t/**\n\t\t * the type of event\n\t\t * @type {String}\n\t\t */\n\t\tthis.type = type;\n\n\t\t/**\n\t\t * an array of arguments that are used when calling the listener function\n\t\t * @type {Array}\n\t\t */\n\t\tthis.args = args || [];\n\n\t\t/**\n\t\t * a reference to the emitter that fired the event\n\t\t * @type {Emitter}\n\t\t */\n\t\tthis.target = target;\n\t}\n}\n",
+    "static": true,
+    "longname": "/home/circleci/repo/src/Event.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 66,
+    "kind": "class",
+    "name": "Event",
+    "memberof": "src/Event.js",
+    "static": true,
+    "longname": "src/Event.js~Event",
+    "access": "public",
+    "export": true,
+    "importPath": "regexp-events/src/Event.js",
+    "importStyle": "Event",
+    "description": "",
+    "lineNumber": 5,
+    "unknown": [
+      {
+        "tagName": "@classdesc",
+        "tagValue": "the basic event class"
+      },
+      {
+        "tagName": "@class",
+        "tagValue": "Event"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 67,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#constructor",
+    "access": "public",
+    "description": "",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "the type of event, this can be anything, but its a good idea just to make it a string"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Emitter"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": "the emitter that is firing this event"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "args",
+        "description": "an array of arguments that is used on the listener functions"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Event"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "member",
+    "name": "type",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#type",
+    "access": "public",
+    "description": "the type of event",
+    "lineNumber": 19,
+    "type": {
+      "nullable": null,
+      "types": [
+        "String"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "member",
+    "name": "args",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#args",
+    "access": "public",
+    "description": "an array of arguments that are used when calling the listener function",
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "member",
+    "name": "target",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#target",
+    "access": "public",
+    "description": "a reference to the emitter that fired the event",
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Emitter"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import Emitter from \"./Emitter\";\nimport Event from \"./Event\";\n\nexport { Emitter, Event };\n",
+    "static": true,
+    "longname": "/home/circleci/repo/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "src/utils.js",
+    "content": "export function clearListeners(eventMap, eventType, force) {\n\tif (force) {\n\t\teventMap.delete(eventType);\n\t} else {\n\t\tlet listeners = eventMap.get(eventType);\n\t\tlisteners.filter(listener => !listener.isStatic).forEach((listener, i) => {\n\t\t\tlisteners.splice(listeners.indexOf(listener), 1);\n\t\t});\n\n\t\t// if there are not listeners left, remove the array\n\t\tif (listeners.length === 0) eventMap.delete(eventType);\n\t}\n}\n\nexport function isRegExpEqual(r1, r2) {\n\treturn (\n\t\tr1 instanceof RegExp &&\n\t\tr2 instanceof RegExp &&\n\t\tr2.source === r1.source &&\n\t\tr2.global === r1.global &&\n\t\tr2.ignoreCase === r1.ignoreCase &&\n\t\tr2.multiline === r1.multiline &&\n\t\tr2.sticky === r1.sticky &&\n\t\tr2.unicode === r1.unicode\n\t);\n}\n",
+    "static": true,
+    "longname": "/home/circleci/repo/src/utils.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "name": "clearListeners",
+    "memberof": "src/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils.js~clearListeners",
+    "access": "public",
+    "export": true,
+    "importPath": "regexp-events/src/utils.js",
+    "importStyle": "{clearListeners}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "eventMap",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "eventType",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "force",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 74,
+    "kind": "function",
+    "name": "isRegExpEqual",
+    "memberof": "src/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils.js~isRegExpEqual",
+    "access": "public",
+    "export": true,
+    "importPath": "regexp-events/src/utils.js",
+    "importStyle": "{isRegExpEqual}",
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "params": [
+      {
+        "name": "r1",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "r2",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# RegExp Events\n\n[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\n\nA simple and small event emitter that supports regular expressions.\n\n### Example\n\n```javascript\nlet emitter = new Emitter();\n\n// listen for an event\nemitter.on(\"example-event\", (message, event) => {\n\tconsole.log(message);\n});\n\nemitter.emit(\"example-event\", \"Hello World\");\n\n// or listen for all events on this emitter\nemitter.on(/.*/, (arg1, arg2, event) => {\n\tconsole.log(arg1, arg2);\n});\n\nemitter.emit(\"test-event\", \"message\", \"arg2\");\n```\n\n### Emitter\n\n#### on(eventType: String|Event|RegExp, listener: Function, context: Object, isStatic = false, times = Infinity)\n\n```javascript\nlet emitter = new Emitter();\nlet listener = () => {\n\tconsole.log(\"Hello World\");\n};\nlet context = {\n\tprop: \"some-prop\",\n};\n\n// bind a basic event\nemitter.on(\"test\", listener);\n\n// bind an event with a RegExp\nemitter.on(/test-.*/, listener);\n\n// set the listeners context\nemitter.on(\"test\", listener, context);\n\n// bind a static listener\n// static listeners can only be removed by passing the \"force=true\" flag into either Emitter.off or Emitter.clear\nemitter.on(\"test\", listener, true);\n\n// bind an event that will remove itself after being called X number of times\nemitter.on(/test-.*/, listener, 10);\n\n// its possible to pass the context, times, and isStatic arguments in any order\nemitter.on(\"test\", listener, true, context, 20);\nemitter.on(\"test\", listener, 18, true, context);\nemitter.on(\"test\", listener, context, true, 15);\nemitter.on(\"test\", listener, true, 15);\nemitter.on(\"test\", listener, 10, context);\nemitter.on(\"test\", listener, context, true);\n```\n\n#### once(eventType: String|Event|RegExp, listener: Function)\n\nthis is just like calling `emitter.on()` with `times` set to 1\n\n#### off(eventType: String|Event|RegExp, listener: Function, context: Object, force = false)\n\nunbinds a listener\n\n```javascript\nlet emitter = new Emitter();\nlet context = {};\nfunction listener() {}\n\n// this will unbind the first listener that has the same eventType and listener\nemitter.off(\"test\", listener);\n\n// this will not work because the original listener was not bound with a RegExp\nemitter.on(\"test\", listener);\nemitter.off(/.*/, listener);\n\n// if emitter.on was called with a context, then you have to pass the exact same context into emitter.off to unbind the listener\nemitter.on(\"test\", listener, context);\n\nemitter.off(\"test\", listener); // this wont work\nemitter.off(\"test\", listener, context); // this will since the listener has a context\n\n// same as Emitter.on the last two arguments (context, force) can be provided in any order\nemitter.off(\"test\", listener, true);\nemitter.off(/event-.*/, listener, context, true);\nemitter.off(\"some-event\", listener, true, context);\n```\n\n#### emit(eventType: String|Event, ...arguments)\n\n```javascript\nlet emitter = new Emitter();\nlet listener = (arg1, arg2, event) => {\n\tconsole.log(arg1, arg2, event);\n};\n\nemitter.on(\"test\", listener);\n\n// the event is pass into the listener as the last argument\nemitter.emit(\"test\", 5, \"message\");\n\nlet event = new Event(\"test\", [10, \"another message\"]);\nemitter.emit(event);\n```\n\n#### clear(eventType: String|RegExp, force=false, useRegExp=true)\n\n```javascript\nlet emitter = new Emitter();\nfunction listener() {}\n\n// this will clear all non-static listeners that are listening for the \"test\" event\nemitter.on(\"test\", listener);\nemitter.clear(\"test\");\n\n// this will clear all non-static listeners\nemitter.clear();\n\n// this will clear absolutely every listener static or not\nemitter.clear(true);\n\n// this will clear all listeners that match the RegExp or that are equal to the RegExp\nemitter.on(\"test2\", listener);\nemitter.on(\"test5\", listener);\nemitter.on(/test\\d/, listener);\nemitter.clear(/test\\d/);\n\n// if you want to only clear the listeners that have the same RegExp\nemitter.clear(/test\\d/, false, false);\n```\n\n#### count(eventType: String|RegExp, useRegExp=true)\n\n```javascript\nlet emitter = new Emitter();\nlet context = {};\nfunction listener() {}\n\nemitter.on(\"test\", listener);\nemitter.on(\"test2\", listener, true);\nemitter.on(\"test3\", listener, context);\nemitter.on(\"test4\", listener, 20);\nemitter.on(/test\\d/, listener);\n\n// count all the listeners\nemitter.count();\n// -> 3\n\n// count all the listeners of type\nemitter.count(\"test\");\n// -> 1\n\n// count all the listeners that match the RegExp or that have equal RegExp\nemitter.count(/test\\d/);\n// -> 4\n\n// count all the listeners that have a similar RegExp\nemitter.count(/test\\d/, false);\n// -> 1\n```\n",
+    "longname": "/home/circleci/repo/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"regexp-events\",\n  \"version\": \"1.0.0\",\n  \"description\": \"A simple RegExp event emitter\",\n  \"main\": \"dist/regexp-events.js\",\n  \"browser\": \"dist/regexp-events.umd.js\",\n  \"module\": \"dist/regexp-events.es.js\",\n  \"scripts\": {\n    \"precommit\": \"pretty-quick --staged\",\n    \"prepublishOnly\": \"npm run test && npm run build\",\n    \"clean\": \"rimraf dist\",\n    \"prebuild\": \"npm run clean\",\n    \"build\": \"npm-run-all --parallel build:**:*\",\n    \"build:src\": \"rollup -c config/rollup.config.js\",\n    \"build:min\": \"rollup -c config/rollup.min.config.js\",\n    \"build:es\": \"rollup -c config/rollup.es.config.js\",\n    \"build:es:min\": \"rollup -c config/rollup.es.min.config.js\",\n    \"build:umd\": \"rollup -c config/rollup.umd.config.js\",\n    \"build:umd:min\": \"rollup -c config/rollup.umd.min.config.js\",\n    \"clean:test\": \"rimraf coverage\",\n    \"pretest\": \"npm run clean:test\",\n    \"test\": \"npm-run-all --parallel test:karma test:node\",\n    \"test:karma\": \"karma start karma.config.js\",\n    \"test:node\": \"mocha --compilers js:babel-core/register --R spec test/node.js\",\n    \"test:debug\": \"karma start karma.config.js --browsers Chrome --no-single-run\",\n    \"format\": \"prettier --write ./**/*.{js,json,css,md}\",\n    \"predocs\": \"rimraf docs\",\n    \"docs\": \"esdoc\"\n  },\n  \"keywords\": [\n    \"events\",\n    \"emitter\",\n    \"regexp\"\n  ],\n  \"directories\": {\n    \"test\": \"./test/\",\n    \"lib\": \"./src/\"\n  },\n  \"repository\": \"https://github.com/rdfriedl/regexp-events\",\n  \"author\": \"rdfriedl\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"babel-core\": \"^6.26.0\",\n    \"babel-plugin-external-helpers\": \"^6.22.0\",\n    \"babel-plugin-istanbul\": \"^4.1.4\",\n    \"babel-polyfill\": \"^6.23.0\",\n    \"babel-preset-env\": \"^1.6.1\",\n    \"babel-preset-es2015-rollup\": \"^3.0.0\",\n    \"chai\": \"^4.1.0\",\n    \"core-js\": \"^2.5.3\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"husky\": \"^0.14.3\",\n    \"karma\": \"^2.0.0\",\n    \"karma-chrome-launcher\": \"^2.2.0\",\n    \"karma-coverage\": \"^1.1.1\",\n    \"karma-coverage-html-index-reporter\": \"^1.0.2\",\n    \"karma-firefox-launcher\": \"^1.0.1\",\n    \"karma-mocha\": \"^1.3.0\",\n    \"karma-mocha-reporter\": \"^2.2.3\",\n    \"karma-phantomjs-launcher\": \"^1.0.4\",\n    \"karma-rollup-plugin\": \"^0.2.4\",\n    \"karma-sinon-chai\": \"^1.3.1\",\n    \"karma-source-map-support\": \"^1.2.0\",\n    \"mocha\": \"^3.4.2\",\n    \"npm-run-all\": \"^4.0.2\",\n    \"prettier\": \"^1.10.2\",\n    \"pretty-quick\": \"^1.4.1\",\n    \"rimraf\": \"^2.6.1\",\n    \"rollup\": \"^0.44.0\",\n    \"rollup-plugin-babel\": \"^2.7.1\",\n    \"rollup-plugin-commonjs\": \"^8.0.2\",\n    \"rollup-plugin-node-resolve\": \"^3.0.0\",\n    \"rollup-plugin-uglify\": \"^2.0.1\",\n    \"sinon\": \"^2.3.8\",\n    \"sinon-chai\": \"^2.11.0\",\n    \"uglify-es\": \"^3.0.24\"\n  },\n  \"dependencies\": {\n    \"lodash.isfunction\": \"^3.0.8\",\n    \"lodash.isregexp\": \"^4.0.1\",\n    \"lodash.isstring\": \"^4.0.1\"\n  },\n  \"prettier\": {\n    \"useTabs\": true,\n    \"semi\": true,\n    \"trailingComma\": \"all\",\n    \"printWidth\": 120\n  }\n}\n",
+    "longname": "/home/circleci/repo/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 75,
+    "kind": "testFile",
+    "name": "test/Emitter.spec.js",
+    "content": "import { isRegExpEqual } from \"../src/utils\";\n\nfunction expectListenerCount(emitter, type, count, useRegExp = true) {\n\texpect(emitter).to.exist;\n\texpect(emitter.eventMap).to.be.an.instanceof(Map);\n\tif (typeof type === \"string\") {\n\t\tif (count === 0) {\n\t\t\texpect(emitter.eventMap.size).to.equal(0);\n\t\t} else {\n\t\t\texpect(emitter.eventMap.get(type)).to.exist;\n\t\t\tif (emitter.eventMap.get(type)) expect(emitter.eventMap.get(type)).to.have.lengthOf(count);\n\t\t}\n\t} else if (type instanceof RegExp) {\n\t\tlet total = 0;\n\t\temitter.eventMap.forEach((listeners, listenersEventType) => {\n\t\t\tif (typeof listenersEventType === \"string\" && useRegExp && type.test(listenersEventType))\n\t\t\t\ttotal += listeners.length;\n\t\t\telse if (isRegExpEqual(listenersEventType, type)) total += listeners.length;\n\t\t});\n\t\texpect(total).to.equal(count);\n\t} else {\n\t\tif (count === 0) {\n\t\t\texpect(emitter.eventMap.size).to.equal(0);\n\t\t} else {\n\t\t\tlet total = 0;\n\t\t\temitter.eventMap.forEach(listeners => (total += listeners.length));\n\t\t\texpect(total).to.equal(count);\n\t\t}\n\t}\n}\n\nexport default function EmitterTestSuite(Emitter, Event) {\n\tdescribe(\"Emitter\", function() {\n\t\tbeforeEach(function() {\n\t\t\tthis.emitter = new Emitter();\n\t\t\tthis.listener = sinon.stub();\n\t\t});\n\n\t\tdescribe(\"on\", function() {\n\t\t\tit(\"(String, Function)\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.be.undefined;\n\t\t\t\texpect(data.isStatic).to.equal(false);\n\t\t\t\texpect(data.times).to.equal(Infinity);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, context)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, context);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(false);\n\t\t\t\texpect(data.times).to.equal(Infinity);\n\t\t\t});\n\t\t\tit(\"(String, Function, context, times)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, context, 10);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(false);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, context, times, isStatic)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, context, 10, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, context, isStatic)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, context, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(Infinity);\n\t\t\t});\n\t\t\tit(\"(String, Function, context, isStatic, times)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, context, true, 10);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, isStatic)\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.be.undefined;\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(Infinity);\n\t\t\t});\n\t\t\tit(\"(String, Function, isStatic, context)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true, context);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(Infinity);\n\t\t\t});\n\t\t\tit(\"(String, Function, isStatic, times)\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true, 10);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.be.undefined;\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, isStatic, context, times)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true, context, 10);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, isStatic, times, context)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true, 10, context);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, times)\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, 10);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.be.undefined;\n\t\t\t\texpect(data.isStatic).to.equal(false);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, times, context)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, 10, context);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(false);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, times, isStatic)\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, 10, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.be.undefined;\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, times, context, isStatic)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, 10, context, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\t\t\tit(\"(String, Function, times, isStatic, context)\", function() {\n\t\t\t\tlet context = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, 10, true, context);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.ctx).to.equal(context);\n\t\t\t\texpect(data.isStatic).to.equal(true);\n\t\t\t\texpect(data.times).to.equal(10);\n\t\t\t});\n\n\t\t\tit(\"(RegExp, Function)\", function() {\n\t\t\t\tlet regexp = /test\\d/;\n\t\t\t\tthis.emitter.on(regexp, this.listener);\n\t\t\t\texpectListenerCount(this.emitter, regexp, 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(regexp)[0];\n\t\t\t\texpect(data.func).to.equal(this.listener);\n\t\t\t});\n\n\t\t\tit(\"(Event, Function)\", function() {\n\t\t\t\tthis.emitter.on(new Event(\"test\"), this.listener);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\n\t\t\t\tlet data = this.emitter.eventMap.get(\"test\")[0];\n\t\t\t\texpect(data.func).to.equal(this.listener);\n\t\t\t});\n\n\t\t\tit(\"() throws if there is no event type\", function() {\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.on();\n\t\t\t\t}).to.throw(Error);\n\t\t\t});\n\n\t\t\tit(\"(Number|Null|Function) throws if the eventType is not a String, Event or RegExp\", function() {\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.on(10);\n\t\t\t\t}).to.throw(Error);\n\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.on(this.listener);\n\t\t\t\t}).to.throw(Error);\n\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.on(Null);\n\t\t\t\t}).to.throw(Error);\n\t\t\t});\n\n\t\t\tit(\"(String) throws if listener function is no provided\", function() {\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.on(\"testing\");\n\t\t\t\t}).to.throw(Error);\n\t\t\t});\n\n\t\t\tit(\"(String, Null) throws if listener is not a function\", function() {\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.on(\"testing\", 50);\n\t\t\t\t}).to.throw(Error);\n\t\t\t});\n\t\t});\n\n\t\tdescribe(\"off\", function() {\n\t\t\tit(\"only removes the first listener that matches\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.off(\"test\", this.listener);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(String, Function) removes listener\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.off(\"test\", this.listener);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\t\t\tit(\"(String, Function) dose not remove static listener\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.off(\"test\", this.listener);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, context) removes listener with context\", function() {\n\t\t\t\tlet ctx = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, ctx);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, ctx);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\n\t\t\tit(\"(String, Function) dost not remove listener with different context\", function() {\n\t\t\t\tlet ctx = {};\n\t\t\t\tlet ctx2 = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, ctx);\n\t\t\t\tthis.emitter.on(\"test\", this.listener, ctx2);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, ctx);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(Event, Function) removes listener\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.off(new Event(\"test\"), this.listener);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\n\t\t\tit(\"(RegExp, Function) removes listener\", function() {\n\t\t\t\tlet regexp = /test.*/;\n\t\t\t\tthis.emitter.on(regexp, this.listener);\n\t\t\t\tthis.emitter.off(regexp, this.listener);\n\t\t\t\texpectListenerCount(this.emitter, regexp, 0);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, force=true) removes static listener\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\t\t\tit(\"(String, Function, force=false) dose not remove static listener\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, false);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, context, force=true) removes static listener\", function() {\n\t\t\t\tlet ctx = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, ctx, true);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, ctx, true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\t\t\tit(\"(String, Function, context, force=false) dose not remove static listener\", function() {\n\t\t\t\tlet ctx = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, ctx, true);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, ctx, false);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(String, Function, force=true, context) removes static listener\", function() {\n\t\t\t\tlet ctx = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true, ctx);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, true, ctx);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\t\t\tit(\"(String, Function, force=false, context) dose not remove static listener\", function() {\n\t\t\t\tlet ctx = {};\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true, ctx);\n\t\t\t\tthis.emitter.off(\"test\", this.listener, false, ctx);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\t\t});\n\n\t\tdescribe(\"clear\", function() {\n\t\t\tit(\"() removes all listeners\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test2\", this.listener);\n\t\t\t\tthis.emitter.clear();\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t\texpectListenerCount(this.emitter, \"test2\", 0);\n\t\t\t});\n\n\t\t\tit(\"() dose not remove static listeners\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.clear();\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(force=true) removes static listeners\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.clear(true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\n\t\t\tit(\"(force=false) dose not remove static listeners\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.clear(false);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(String) removes all listeners of type\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.clear(\"test\");\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\n\t\t\tit(\"(String, force=true) removes static listeners of type\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.clear(\"test\", true);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\n\t\t\tit(\"(String, force=false) dose not remove static listeners of type\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener, true);\n\t\t\t\tthis.emitter.clear(\"test\", false);\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 1);\n\t\t\t});\n\n\t\t\tit(\"(Event) removes all listeners of event type\", function() {\n\t\t\t\tthis.emitter.on(new Event(\"test\"), this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.clear(new Event(\"test\"));\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\n\t\t\tit(\"(RegExp) removes listeners with matching String or same RegExp\", function() {\n\t\t\t\tthis.emitter.on(/test\\d/, this.listener);\n\t\t\t\tthis.emitter.on(\"test10\", this.listener);\n\t\t\t\tthis.emitter.clear(/test\\d/);\n\t\t\t\texpectListenerCount(this.emitter, \"test10\", 0);\n\t\t\t\texpectListenerCount(this.emitter, /test\\d/, 0, false);\n\t\t\t});\n\n\t\t\tit(\"(RegExp, force=false, useRegexp=false) only removes matching RegExp\", function() {\n\t\t\t\tthis.emitter.on(/test\\d/, this.listener);\n\t\t\t\tthis.emitter.on(\"test10\", this.listener);\n\t\t\t\tthis.emitter.clear(/test\\d/, false, false);\n\t\t\t\texpectListenerCount(this.emitter, \"test10\", 1);\n\t\t\t\texpectListenerCount(this.emitter, /test\\d/, 0, false);\n\t\t\t});\n\n\t\t\tit(\"(RegExp, force=false, useRegexp=false) takes RegExp flags into account when comparing regexes\", function() {\n\t\t\t\tthis.emitter.on(/test\\d/i, this.listener);\n\t\t\t\tthis.emitter.clear(/test\\d/, false, false);\n\t\t\t\texpectListenerCount(this.emitter, /test\\d/i, 1, false);\n\t\t\t\tthis.emitter.clear(/test\\d/i, false, false);\n\t\t\t\texpectListenerCount(this.emitter, /test\\d/i, 0, false);\n\t\t\t});\n\t\t});\n\n\t\tdescribe(\"count\", function() {\n\t\t\tit(\"() returns total number of all listeners on the emitter\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test2\", this.listener);\n\t\t\t\texpect(this.emitter.count()).to.equal(2);\n\t\t\t});\n\n\t\t\tit(\"(String) returns number of listeners of that type\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test2\", this.listener);\n\t\t\t\texpect(this.emitter.count(\"test\")).to.equal(2);\n\t\t\t});\n\n\t\t\tit(\"(Event) returns number of listeners of Event.type\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test2\", this.listener);\n\t\t\t\texpect(this.emitter.count(new Event(\"test\"))).to.equal(2);\n\t\t\t});\n\n\t\t\tit(\"(RegExp) returns number of listeners that match the RegExp\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.on(\"test2\", this.listener);\n\t\t\t\tthis.emitter.on(\"test3\", this.listener);\n\t\t\t\tthis.emitter.on(\"test10\", this.listener);\n\t\t\t\texpect(this.emitter.count(/test\\d/)).to.equal(3);\n\t\t\t\texpect(this.emitter.count(/.*/)).to.equal(5);\n\t\t\t});\n\n\t\t\tit(\"(RegExp, useRegExp=false) returns number of listeners that have a identical RegExp\", function() {\n\t\t\t\tthis.emitter.on(/test\\d/g, this.listener);\n\t\t\t\tthis.emitter.on(/test\\d/, this.listener);\n\t\t\t\tthis.emitter.on(\"test10\", this.listener);\n\t\t\t\texpect(this.emitter.count(/test\\d/, false)).to.equal(1);\n\t\t\t\texpect(this.emitter.count(/test\\d/g, false)).to.equal(1);\n\t\t\t});\n\t\t});\n\n\t\tdescribe(\"once\", function() {\n\t\t\tit(\"removes listener after the event is fired\", function() {\n\t\t\t\tthis.emitter.once(\"test\", this.listener);\n\t\t\t\tthis.emitter.emit(\"test\");\n\t\t\t\texpect(this.listener).to.have.been.called;\n\t\t\t\texpectListenerCount(this.emitter, \"test\", 0);\n\t\t\t});\n\t\t});\n\n\t\tdescribe(\"emit\", function() {\n\t\t\tit(\"throws error if eventType is not a string\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\texpect(() => {\n\t\t\t\t\tthis.emitter.emit(null);\n\t\t\t\t}).to.throw(Error);\n\t\t\t});\n\n\t\t\tit(\"(String) calls listeners\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.emit(\"test\");\n\t\t\t\texpect(this.listener).to.have.been.called;\n\t\t\t});\n\n\t\t\tit(\"(String, args...) calls listeners with arguments\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.emit(\"test\", 1, 2, 3);\n\t\t\t\texpect(this.listener).to.have.been.calledWith(1, 2, 3);\n\t\t\t});\n\n\t\t\tit(\"(String, args...) passes the Event as the last arguments\", function() {\n\t\t\t\tthis.emitter.on(\"test\", (...args) => {\n\t\t\t\t\texpect(args[args.length - 1]).to.be.an.instanceof(Event);\n\t\t\t\t});\n\t\t\t\tthis.emitter.emit(\"test\", 1, 2, 3);\n\t\t\t});\n\n\t\t\tit(\"(Event) calls listeners\", function() {\n\t\t\t\tthis.emitter.on(new Event(\"test\"), this.listener);\n\t\t\t\tthis.emitter.emit(\"test\");\n\t\t\t\texpect(this.listener).to.have.been.called;\n\t\t\t});\n\n\t\t\tit(\"(Event) emits the Event that is passed in\", function() {\n\t\t\t\tlet event = new Event(\"test\");\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.emit(event);\n\t\t\t\texpect(this.listener).to.have.been.calledWithExactly(event);\n\t\t\t});\n\n\t\t\tit(\"(Event) calls listeners with Event.args\", function() {\n\t\t\t\tlet event = new Event(\"test\", [1, 2, 3]);\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.emit(event);\n\t\t\t\texpect(this.listener).to.have.been.calledWithExactly(1, 2, 3, event);\n\t\t\t});\n\n\t\t\tit(\"(Event) sets Event.target if its not already set\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\n\t\t\t\tlet event = new Event(\"test\", [1, 2, 3]);\n\t\t\t\tthis.emitter.emit(event);\n\t\t\t\texpect(event.target).to.equal(this.emitter);\n\n\t\t\t\tlet target = {};\n\t\t\t\tevent = new Event(\"test\", [1, 2, 3], target);\n\t\t\t\tthis.emitter.emit(event);\n\t\t\t\texpect(event.target).to.equal(target);\n\t\t\t});\n\n\t\t\tit(\"dost not fire the event if Emitter.suppressEvents == true\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener);\n\t\t\t\tthis.emitter.suppressEvents = true;\n\t\t\t\tthis.emitter.emit(\"test\");\n\t\t\t\texpect(this.listener).not.to.have.been.called;\n\t\t\t});\n\n\t\t\tit(\"removes listener after calling is the correct number of times\", function() {\n\t\t\t\tthis.emitter.on(\"test\", this.listener, undefined, false, 10);\n\t\t\t\tfor (let i = 0; i < 20; i++) this.emitter.emit(\"test\");\n\n\t\t\t\texpect(this.listener).to.have.callCount(10);\n\t\t\t});\n\t\t});\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/circleci/repo/test/Emitter.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "test",
+    "name": "describe0",
+    "testId": 0,
+    "memberof": "test/Emitter.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0",
+    "access": null,
+    "description": "Emitter",
+    "lineNumber": 33
+  },
+  {
+    "__docId__": 77,
+    "kind": "test",
+    "name": "describe1",
+    "testId": 1,
+    "memberof": "test/Emitter.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1",
+    "access": null,
+    "description": "on",
+    "lineNumber": 39
+  },
+  {
+    "__docId__": 78,
+    "kind": "test",
+    "name": "it2",
+    "testId": 2,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it2",
+    "access": null,
+    "description": "(String, Function)",
+    "lineNumber": 40
+  },
+  {
+    "__docId__": 79,
+    "kind": "test",
+    "name": "it3",
+    "testId": 3,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it3",
+    "access": null,
+    "description": "(String, Function, context)",
+    "lineNumber": 50
+  },
+  {
+    "__docId__": 80,
+    "kind": "test",
+    "name": "it4",
+    "testId": 4,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it4",
+    "access": null,
+    "description": "(String, Function, context, times)",
+    "lineNumber": 60
+  },
+  {
+    "__docId__": 81,
+    "kind": "test",
+    "name": "it5",
+    "testId": 5,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it5",
+    "access": null,
+    "description": "(String, Function, context, times, isStatic)",
+    "lineNumber": 70
+  },
+  {
+    "__docId__": 82,
+    "kind": "test",
+    "name": "it6",
+    "testId": 6,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it6",
+    "access": null,
+    "description": "(String, Function, context, isStatic)",
+    "lineNumber": 80
+  },
+  {
+    "__docId__": 83,
+    "kind": "test",
+    "name": "it7",
+    "testId": 7,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it7",
+    "access": null,
+    "description": "(String, Function, context, isStatic, times)",
+    "lineNumber": 90
+  },
+  {
+    "__docId__": 84,
+    "kind": "test",
+    "name": "it8",
+    "testId": 8,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it8",
+    "access": null,
+    "description": "(String, Function, isStatic)",
+    "lineNumber": 101
+  },
+  {
+    "__docId__": 85,
+    "kind": "test",
+    "name": "it9",
+    "testId": 9,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it9",
+    "access": null,
+    "description": "(String, Function, isStatic, context)",
+    "lineNumber": 110
+  },
+  {
+    "__docId__": 86,
+    "kind": "test",
+    "name": "it10",
+    "testId": 10,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it10",
+    "access": null,
+    "description": "(String, Function, isStatic, times)",
+    "lineNumber": 120
+  },
+  {
+    "__docId__": 87,
+    "kind": "test",
+    "name": "it11",
+    "testId": 11,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it11",
+    "access": null,
+    "description": "(String, Function, isStatic, context, times)",
+    "lineNumber": 129
+  },
+  {
+    "__docId__": 88,
+    "kind": "test",
+    "name": "it12",
+    "testId": 12,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it12",
+    "access": null,
+    "description": "(String, Function, isStatic, times, context)",
+    "lineNumber": 139
+  },
+  {
+    "__docId__": 89,
+    "kind": "test",
+    "name": "it13",
+    "testId": 13,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it13",
+    "access": null,
+    "description": "(String, Function, times)",
+    "lineNumber": 150
+  },
+  {
+    "__docId__": 90,
+    "kind": "test",
+    "name": "it14",
+    "testId": 14,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it14",
+    "access": null,
+    "description": "(String, Function, times, context)",
+    "lineNumber": 159
+  },
+  {
+    "__docId__": 91,
+    "kind": "test",
+    "name": "it15",
+    "testId": 15,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it15",
+    "access": null,
+    "description": "(String, Function, times, isStatic)",
+    "lineNumber": 169
+  },
+  {
+    "__docId__": 92,
+    "kind": "test",
+    "name": "it16",
+    "testId": 16,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it16",
+    "access": null,
+    "description": "(String, Function, times, context, isStatic)",
+    "lineNumber": 178
+  },
+  {
+    "__docId__": 93,
+    "kind": "test",
+    "name": "it17",
+    "testId": 17,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it17",
+    "access": null,
+    "description": "(String, Function, times, isStatic, context)",
+    "lineNumber": 188
+  },
+  {
+    "__docId__": 94,
+    "kind": "test",
+    "name": "it18",
+    "testId": 18,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it18",
+    "access": null,
+    "description": "(RegExp, Function)",
+    "lineNumber": 199
+  },
+  {
+    "__docId__": 95,
+    "kind": "test",
+    "name": "it19",
+    "testId": 19,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it19",
+    "access": null,
+    "description": "(Event, Function)",
+    "lineNumber": 208
+  },
+  {
+    "__docId__": 96,
+    "kind": "test",
+    "name": "it20",
+    "testId": 20,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it20",
+    "access": null,
+    "description": "() throws if there is no event type",
+    "lineNumber": 216
+  },
+  {
+    "__docId__": 97,
+    "kind": "test",
+    "name": "it21",
+    "testId": 21,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it21",
+    "access": null,
+    "description": "(Number|Null|Function) throws if the eventType is not a String, Event or RegExp",
+    "lineNumber": 222
+  },
+  {
+    "__docId__": 98,
+    "kind": "test",
+    "name": "it22",
+    "testId": 22,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it22",
+    "access": null,
+    "description": "(String) throws if listener function is no provided",
+    "lineNumber": 236
+  },
+  {
+    "__docId__": 99,
+    "kind": "test",
+    "name": "it23",
+    "testId": 23,
+    "memberof": "test/Emitter.spec.js~describe0.describe1",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe1.it23",
+    "access": null,
+    "description": "(String, Null) throws if listener is not a function",
+    "lineNumber": 242
+  },
+  {
+    "__docId__": 100,
+    "kind": "test",
+    "name": "describe24",
+    "testId": 24,
+    "memberof": "test/Emitter.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24",
+    "access": null,
+    "description": "off",
+    "lineNumber": 249
+  },
+  {
+    "__docId__": 101,
+    "kind": "test",
+    "name": "it25",
+    "testId": 25,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it25",
+    "access": null,
+    "description": "only removes the first listener that matches",
+    "lineNumber": 250
+  },
+  {
+    "__docId__": 102,
+    "kind": "test",
+    "name": "it26",
+    "testId": 26,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it26",
+    "access": null,
+    "description": "(String, Function) removes listener",
+    "lineNumber": 257
+  },
+  {
+    "__docId__": 103,
+    "kind": "test",
+    "name": "it27",
+    "testId": 27,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it27",
+    "access": null,
+    "description": "(String, Function) dose not remove static listener",
+    "lineNumber": 262
+  },
+  {
+    "__docId__": 104,
+    "kind": "test",
+    "name": "it28",
+    "testId": 28,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it28",
+    "access": null,
+    "description": "(String, Function, context) removes listener with context",
+    "lineNumber": 268
+  },
+  {
+    "__docId__": 105,
+    "kind": "test",
+    "name": "it29",
+    "testId": 29,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it29",
+    "access": null,
+    "description": "(String, Function) dost not remove listener with different context",
+    "lineNumber": 275
+  },
+  {
+    "__docId__": 106,
+    "kind": "test",
+    "name": "it30",
+    "testId": 30,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it30",
+    "access": null,
+    "description": "(Event, Function) removes listener",
+    "lineNumber": 284
+  },
+  {
+    "__docId__": 107,
+    "kind": "test",
+    "name": "it31",
+    "testId": 31,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it31",
+    "access": null,
+    "description": "(RegExp, Function) removes listener",
+    "lineNumber": 290
+  },
+  {
+    "__docId__": 108,
+    "kind": "test",
+    "name": "it32",
+    "testId": 32,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it32",
+    "access": null,
+    "description": "(String, Function, force=true) removes static listener",
+    "lineNumber": 297
+  },
+  {
+    "__docId__": 109,
+    "kind": "test",
+    "name": "it33",
+    "testId": 33,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it33",
+    "access": null,
+    "description": "(String, Function, force=false) dose not remove static listener",
+    "lineNumber": 302
+  },
+  {
+    "__docId__": 110,
+    "kind": "test",
+    "name": "it34",
+    "testId": 34,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it34",
+    "access": null,
+    "description": "(String, Function, context, force=true) removes static listener",
+    "lineNumber": 308
+  },
+  {
+    "__docId__": 111,
+    "kind": "test",
+    "name": "it35",
+    "testId": 35,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it35",
+    "access": null,
+    "description": "(String, Function, context, force=false) dose not remove static listener",
+    "lineNumber": 314
+  },
+  {
+    "__docId__": 112,
+    "kind": "test",
+    "name": "it36",
+    "testId": 36,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it36",
+    "access": null,
+    "description": "(String, Function, force=true, context) removes static listener",
+    "lineNumber": 321
+  },
+  {
+    "__docId__": 113,
+    "kind": "test",
+    "name": "it37",
+    "testId": 37,
+    "memberof": "test/Emitter.spec.js~describe0.describe24",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe24.it37",
+    "access": null,
+    "description": "(String, Function, force=false, context) dose not remove static listener",
+    "lineNumber": 327
+  },
+  {
+    "__docId__": 114,
+    "kind": "test",
+    "name": "describe38",
+    "testId": 38,
+    "memberof": "test/Emitter.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38",
+    "access": null,
+    "description": "clear",
+    "lineNumber": 335
+  },
+  {
+    "__docId__": 115,
+    "kind": "test",
+    "name": "it39",
+    "testId": 39,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it39",
+    "access": null,
+    "description": "() removes all listeners",
+    "lineNumber": 336
+  },
+  {
+    "__docId__": 116,
+    "kind": "test",
+    "name": "it40",
+    "testId": 40,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it40",
+    "access": null,
+    "description": "() dose not remove static listeners",
+    "lineNumber": 345
+  },
+  {
+    "__docId__": 117,
+    "kind": "test",
+    "name": "it41",
+    "testId": 41,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it41",
+    "access": null,
+    "description": "(force=true) removes static listeners",
+    "lineNumber": 352
+  },
+  {
+    "__docId__": 118,
+    "kind": "test",
+    "name": "it42",
+    "testId": 42,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it42",
+    "access": null,
+    "description": "(force=false) dose not remove static listeners",
+    "lineNumber": 359
+  },
+  {
+    "__docId__": 119,
+    "kind": "test",
+    "name": "it43",
+    "testId": 43,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it43",
+    "access": null,
+    "description": "(String) removes all listeners of type",
+    "lineNumber": 366
+  },
+  {
+    "__docId__": 120,
+    "kind": "test",
+    "name": "it44",
+    "testId": 44,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it44",
+    "access": null,
+    "description": "(String, force=true) removes static listeners of type",
+    "lineNumber": 373
+  },
+  {
+    "__docId__": 121,
+    "kind": "test",
+    "name": "it45",
+    "testId": 45,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it45",
+    "access": null,
+    "description": "(String, force=false) dose not remove static listeners of type",
+    "lineNumber": 380
+  },
+  {
+    "__docId__": 122,
+    "kind": "test",
+    "name": "it46",
+    "testId": 46,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it46",
+    "access": null,
+    "description": "(Event) removes all listeners of event type",
+    "lineNumber": 387
+  },
+  {
+    "__docId__": 123,
+    "kind": "test",
+    "name": "it47",
+    "testId": 47,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it47",
+    "access": null,
+    "description": "(RegExp) removes listeners with matching String or same RegExp",
+    "lineNumber": 394
+  },
+  {
+    "__docId__": 124,
+    "kind": "test",
+    "name": "it48",
+    "testId": 48,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it48",
+    "access": null,
+    "description": "(RegExp, force=false, useRegexp=false) only removes matching RegExp",
+    "lineNumber": 402
+  },
+  {
+    "__docId__": 125,
+    "kind": "test",
+    "name": "it49",
+    "testId": 49,
+    "memberof": "test/Emitter.spec.js~describe0.describe38",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe38.it49",
+    "access": null,
+    "description": "(RegExp, force=false, useRegexp=false) takes RegExp flags into account when comparing regexes",
+    "lineNumber": 410
+  },
+  {
+    "__docId__": 126,
+    "kind": "test",
+    "name": "describe50",
+    "testId": 50,
+    "memberof": "test/Emitter.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe50",
+    "access": null,
+    "description": "count",
+    "lineNumber": 419
+  },
+  {
+    "__docId__": 127,
+    "kind": "test",
+    "name": "it51",
+    "testId": 51,
+    "memberof": "test/Emitter.spec.js~describe0.describe50",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe50.it51",
+    "access": null,
+    "description": "() returns total number of all listeners on the emitter",
+    "lineNumber": 420
+  },
+  {
+    "__docId__": 128,
+    "kind": "test",
+    "name": "it52",
+    "testId": 52,
+    "memberof": "test/Emitter.spec.js~describe0.describe50",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe50.it52",
+    "access": null,
+    "description": "(String) returns number of listeners of that type",
+    "lineNumber": 426
+  },
+  {
+    "__docId__": 129,
+    "kind": "test",
+    "name": "it53",
+    "testId": 53,
+    "memberof": "test/Emitter.spec.js~describe0.describe50",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe50.it53",
+    "access": null,
+    "description": "(Event) returns number of listeners of Event.type",
+    "lineNumber": 433
+  },
+  {
+    "__docId__": 130,
+    "kind": "test",
+    "name": "it54",
+    "testId": 54,
+    "memberof": "test/Emitter.spec.js~describe0.describe50",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe50.it54",
+    "access": null,
+    "description": "(RegExp) returns number of listeners that match the RegExp",
+    "lineNumber": 440
+  },
+  {
+    "__docId__": 131,
+    "kind": "test",
+    "name": "it55",
+    "testId": 55,
+    "memberof": "test/Emitter.spec.js~describe0.describe50",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe50.it55",
+    "access": null,
+    "description": "(RegExp, useRegExp=false) returns number of listeners that have a identical RegExp",
+    "lineNumber": 450
+  },
+  {
+    "__docId__": 132,
+    "kind": "test",
+    "name": "describe56",
+    "testId": 56,
+    "memberof": "test/Emitter.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe56",
+    "access": null,
+    "description": "once",
+    "lineNumber": 459
+  },
+  {
+    "__docId__": 133,
+    "kind": "test",
+    "name": "it57",
+    "testId": 57,
+    "memberof": "test/Emitter.spec.js~describe0.describe56",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe56.it57",
+    "access": null,
+    "description": "removes listener after the event is fired",
+    "lineNumber": 460
+  },
+  {
+    "__docId__": 134,
+    "kind": "test",
+    "name": "describe58",
+    "testId": 58,
+    "memberof": "test/Emitter.spec.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58",
+    "access": null,
+    "description": "emit",
+    "lineNumber": 468
+  },
+  {
+    "__docId__": 135,
+    "kind": "test",
+    "name": "it59",
+    "testId": 59,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it59",
+    "access": null,
+    "description": "throws error if eventType is not a string",
+    "lineNumber": 469
+  },
+  {
+    "__docId__": 136,
+    "kind": "test",
+    "name": "it60",
+    "testId": 60,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it60",
+    "access": null,
+    "description": "(String) calls listeners",
+    "lineNumber": 476
+  },
+  {
+    "__docId__": 137,
+    "kind": "test",
+    "name": "it61",
+    "testId": 61,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it61",
+    "access": null,
+    "description": "(String, args...) calls listeners with arguments",
+    "lineNumber": 482
+  },
+  {
+    "__docId__": 138,
+    "kind": "test",
+    "name": "it62",
+    "testId": 62,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it62",
+    "access": null,
+    "description": "(String, args...) passes the Event as the last arguments",
+    "lineNumber": 488
+  },
+  {
+    "__docId__": 139,
+    "kind": "test",
+    "name": "it63",
+    "testId": 63,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it63",
+    "access": null,
+    "description": "(Event) calls listeners",
+    "lineNumber": 495
+  },
+  {
+    "__docId__": 140,
+    "kind": "test",
+    "name": "it64",
+    "testId": 64,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it64",
+    "access": null,
+    "description": "(Event) emits the Event that is passed in",
+    "lineNumber": 501
+  },
+  {
+    "__docId__": 141,
+    "kind": "test",
+    "name": "it65",
+    "testId": 65,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it65",
+    "access": null,
+    "description": "(Event) calls listeners with Event.args",
+    "lineNumber": 508
+  },
+  {
+    "__docId__": 142,
+    "kind": "test",
+    "name": "it66",
+    "testId": 66,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it66",
+    "access": null,
+    "description": "(Event) sets Event.target if its not already set",
+    "lineNumber": 515
+  },
+  {
+    "__docId__": 143,
+    "kind": "test",
+    "name": "it67",
+    "testId": 67,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it67",
+    "access": null,
+    "description": "dost not fire the event if Emitter.suppressEvents == true",
+    "lineNumber": 528
+  },
+  {
+    "__docId__": 144,
+    "kind": "test",
+    "name": "it68",
+    "testId": 68,
+    "memberof": "test/Emitter.spec.js~describe0.describe58",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Emitter.spec.js~describe0.describe58.it68",
+    "access": null,
+    "description": "removes listener after calling is the correct number of times",
+    "lineNumber": 535
+  },
+  {
+    "__docId__": 145,
+    "kind": "testFile",
+    "name": "test/Event.spec.js",
+    "content": "export default function EventTestSuite(Event) {\n\tdescribe(\"Event\", () => {\n\t\tdescribe(\"constructor\", () => {\n\t\t\tit(\"should throw an error if type is not a string\", () => {\n\t\t\t\texpect(() => {\n\t\t\t\t\tnew Event();\n\t\t\t\t}).to.throw();\n\n\t\t\t\texpect(() => {\n\t\t\t\t\tnew Event(null);\n\t\t\t\t}).to.throw();\n\n\t\t\t\texpect(() => {\n\t\t\t\t\tnew Event({});\n\t\t\t\t}).to.throw();\n\n\t\t\t\texpect(() => {\n\t\t\t\t\tnew Event(() => {});\n\t\t\t\t}).to.throw();\n\t\t\t});\n\n\t\t\tit(\"(String) should return an Event\", () => {\n\t\t\t\texpect(new Event(\"string\")).to.be.an.instanceOf(Event);\n\t\t\t});\n\n\t\t\tit(\"should set args to an empty array if not passed in\", () => {\n\t\t\t\texpect(new Event(\"testing\").args).to.eql([]);\n\t\t\t});\n\t\t});\n\t});\n}\n",
+    "static": true,
+    "longname": "/home/circleci/repo/test/Event.spec.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 146,
+    "kind": "test",
+    "name": "describe69",
+    "testId": 69,
+    "memberof": "test/Event.spec.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/Event.spec.js~describe69",
+    "access": null,
+    "description": "Event",
+    "lineNumber": 2
+  },
+  {
+    "__docId__": 147,
+    "kind": "test",
+    "name": "describe70",
+    "testId": 70,
+    "memberof": "test/Event.spec.js~describe69",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/Event.spec.js~describe69.describe70",
+    "access": null,
+    "description": "constructor",
+    "lineNumber": 3
+  },
+  {
+    "__docId__": 148,
+    "kind": "test",
+    "name": "it71",
+    "testId": 71,
+    "memberof": "test/Event.spec.js~describe69.describe70",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Event.spec.js~describe69.describe70.it71",
+    "access": null,
+    "description": "should throw an error if type is not a string",
+    "lineNumber": 4
+  },
+  {
+    "__docId__": 149,
+    "kind": "test",
+    "name": "it72",
+    "testId": 72,
+    "memberof": "test/Event.spec.js~describe69.describe70",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Event.spec.js~describe69.describe70.it72",
+    "access": null,
+    "description": "(String) should return an Event",
+    "lineNumber": 22
+  },
+  {
+    "__docId__": 150,
+    "kind": "test",
+    "name": "it73",
+    "testId": 73,
+    "memberof": "test/Event.spec.js~describe69.describe70",
+    "testDepth": 2,
+    "static": true,
+    "longname": "test/Event.spec.js~describe69.describe70.it73",
+    "access": null,
+    "description": "should set args to an empty array if not passed in",
+    "lineNumber": 26
+  }
+]

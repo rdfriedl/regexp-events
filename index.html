@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | RegExp Events</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="A simple RegExp event emitter"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="RegExp Events"><meta property="twitter:description" content="A simple RegExp event emitter"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/rdfriedl/regexp-events"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Emitter.js~Emitter.html">Emitter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Event.js~Event.html">Event</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-clearListeners">clearListeners</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isRegExpEqual">isRegExpEqual</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="regexp-events">RegExp Events</h1><p><a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a></p>
+<p>A simple and small event emitter that supports regular expressions.</p>
+<h3 id="example">Example</h3><pre><code class="lang-javascript"><code class="source-code prettyprint">let emitter = new Emitter();
+
+// listen for an event
+emitter.on(&quot;example-event&quot;, (message, event) =&gt; {
+    console.log(message);
+});
+
+emitter.emit(&quot;example-event&quot;, &quot;Hello World&quot;);
+
+// or listen for all events on this emitter
+emitter.on(/.*/, (arg1, arg2, event) =&gt; {
+    console.log(arg1, arg2);
+});
+
+emitter.emit(&quot;test-event&quot;, &quot;message&quot;, &quot;arg2&quot;);</code>
+</code></pre>
+<h3 id="emitter">Emitter</h3><h4 id="on-eventtype--string-event-regexp--listener--function--context--object--isstatic---false--times---infinity-">on(eventType: String|Event|RegExp, listener: Function, context: Object, isStatic = false, times = Infinity)</h4><pre><code class="lang-javascript"><code class="source-code prettyprint">let emitter = new Emitter();
+let listener = () =&gt; {
+    console.log(&quot;Hello World&quot;);
+};
+let context = {
+    prop: &quot;some-prop&quot;,
+};
+
+// bind a basic event
+emitter.on(&quot;test&quot;, listener);
+
+// bind an event with a RegExp
+emitter.on(/test-.*/, listener);
+
+// set the listeners context
+emitter.on(&quot;test&quot;, listener, context);
+
+// bind a static listener
+// static listeners can only be removed by passing the &quot;force=true&quot; flag into either Emitter.off or Emitter.clear
+emitter.on(&quot;test&quot;, listener, true);
+
+// bind an event that will remove itself after being called X number of times
+emitter.on(/test-.*/, listener, 10);
+
+// its possible to pass the context, times, and isStatic arguments in any order
+emitter.on(&quot;test&quot;, listener, true, context, 20);
+emitter.on(&quot;test&quot;, listener, 18, true, context);
+emitter.on(&quot;test&quot;, listener, context, true, 15);
+emitter.on(&quot;test&quot;, listener, true, 15);
+emitter.on(&quot;test&quot;, listener, 10, context);
+emitter.on(&quot;test&quot;, listener, context, true);</code>
+</code></pre>
+<h4 id="once-eventtype--string-event-regexp--listener--function-">once(eventType: String|Event|RegExp, listener: Function)</h4><p>this is just like calling <code>emitter.on()</code> with <code>times</code> set to 1</p>
+<h4 id="off-eventtype--string-event-regexp--listener--function--context--object--force---false-">off(eventType: String|Event|RegExp, listener: Function, context: Object, force = false)</h4><p>unbinds a listener</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">let emitter = new Emitter();
+let context = {};
+function listener() {}
+
+// this will unbind the first listener that has the same eventType and listener
+emitter.off(&quot;test&quot;, listener);
+
+// this will not work because the original listener was not bound with a RegExp
+emitter.on(&quot;test&quot;, listener);
+emitter.off(/.*/, listener);
+
+// if emitter.on was called with a context, then you have to pass the exact same context into emitter.off to unbind the listener
+emitter.on(&quot;test&quot;, listener, context);
+
+emitter.off(&quot;test&quot;, listener); // this wont work
+emitter.off(&quot;test&quot;, listener, context); // this will since the listener has a context
+
+// same as Emitter.on the last two arguments (context, force) can be provided in any order
+emitter.off(&quot;test&quot;, listener, true);
+emitter.off(/event-.*/, listener, context, true);
+emitter.off(&quot;some-event&quot;, listener, true, context);</code>
+</code></pre>
+<h4 id="emit-eventtype--string-event-----arguments-">emit(eventType: String|Event, ...arguments)</h4><pre><code class="lang-javascript"><code class="source-code prettyprint">let emitter = new Emitter();
+let listener = (arg1, arg2, event) =&gt; {
+    console.log(arg1, arg2, event);
+};
+
+emitter.on(&quot;test&quot;, listener);
+
+// the event is pass into the listener as the last argument
+emitter.emit(&quot;test&quot;, 5, &quot;message&quot;);
+
+let event = new Event(&quot;test&quot;, [10, &quot;another message&quot;]);
+emitter.emit(event);</code>
+</code></pre>
+<h4 id="clear-eventtype--string-regexp--force-false--useregexp-true-">clear(eventType: String|RegExp, force=false, useRegExp=true)</h4><pre><code class="lang-javascript"><code class="source-code prettyprint">let emitter = new Emitter();
+function listener() {}
+
+// this will clear all non-static listeners that are listening for the &quot;test&quot; event
+emitter.on(&quot;test&quot;, listener);
+emitter.clear(&quot;test&quot;);
+
+// this will clear all non-static listeners
+emitter.clear();
+
+// this will clear absolutely every listener static or not
+emitter.clear(true);
+
+// this will clear all listeners that match the RegExp or that are equal to the RegExp
+emitter.on(&quot;test2&quot;, listener);
+emitter.on(&quot;test5&quot;, listener);
+emitter.on(/test\d/, listener);
+emitter.clear(/test\d/);
+
+// if you want to only clear the listeners that have the same RegExp
+emitter.clear(/test\d/, false, false);</code>
+</code></pre>
+<h4 id="count-eventtype--string-regexp--useregexp-true-">count(eventType: String|RegExp, useRegExp=true)</h4><pre><code class="lang-javascript"><code class="source-code prettyprint">let emitter = new Emitter();
+let context = {};
+function listener() {}
+
+emitter.on(&quot;test&quot;, listener);
+emitter.on(&quot;test2&quot;, listener, true);
+emitter.on(&quot;test3&quot;, listener, context);
+emitter.on(&quot;test4&quot;, listener, 20);
+emitter.on(/test\d/, listener);
+
+// count all the listeners
+emitter.count();
+// -&gt; 3
+
+// count all the listeners of type
+emitter.count(&quot;test&quot;);
+// -&gt; 1
+
+// count all the listeners that match the RegExp or that have equal RegExp
+emitter.count(/test\d/);
+// -&gt; 4
+
+// count all the listeners that have a similar RegExp
+emitter.count(/test\d/, false);
+// -&gt; 1</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
