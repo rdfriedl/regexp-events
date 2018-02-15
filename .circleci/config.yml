@@ -36,6 +36,23 @@ jobs:
           paths:
             - dist
 
+  docs:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Build Docs
+          command: npm run docs
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - docs
+
   test-node_4:
     docker:
       - image: circleci/node:4
@@ -157,6 +174,9 @@ workflows:
     jobs:
       - install
       - build:
+          requires:
+            - install
+      - docs:
           requires:
             - install
       - test-node_4:

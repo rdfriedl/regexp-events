@@ -23,7 +23,9 @@
     "test:karma": "karma start karma.config.js",
     "test:node": "mocha --compilers js:babel-core/register --R spec test/node.js",
     "test:debug": "karma start karma.config.js --browsers Chrome --no-single-run",
-    "format": "prettier --write ./**/*.{js,json,css,md}"
+    "format": "prettier --write ./**/*.{js,json,css,md}",
+    "predocs": "rimraf docs",
+    "docs": "esdoc"
   },
   "keywords": [
     "events",
@@ -34,7 +36,7 @@
     "test": "./test/",
     "lib": "./src/"
   },
-  "repository": "https://gitlab.com/rdfriedl/regexp-events",
+  "repository": "https://github.com/rdfriedl/regexp-events",
   "author": "rdfriedl",
   "license": "MIT",
   "devDependencies": {
@@ -46,6 +48,8 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "chai": "^4.1.0",
     "core-js": "^2.5.3",
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0",
     "husky": "^0.14.3",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
