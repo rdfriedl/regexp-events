@@ -41,11 +41,6 @@
   "repository": "https://github.com/rdfriedl/regexp-events",
   "author": "rdfriedl",
   "license": "MIT",
-  "dependencies": {
-    "lodash.isfunction": "^3.0.8",
-    "lodash.isregexp": "^4.0.1",
-    "lodash.isstring": "^4.0.1"
-  },
   "devDependencies": {
     "@commitlint/cli": "^6.1.0",
     "@commitlint/config-conventional": "^6.1.0",

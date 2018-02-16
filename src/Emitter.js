@@ -1,8 +1,5 @@
 import Event from "./Event";
 import { clearListeners, isRegExpEqual } from "./utils";
-import isString from "lodash.isstring";
-import isFunction from "lodash.isfunction";
-import isRegExp from "lodash.isregexp";
 
 function isBoolean(v) {
 	return v === true || v === false;
@@ -76,10 +73,10 @@ export default class Emitter {
 	 * @return {this}
 	 */
 	on(eventType, listener, context, isStatic, times) {
-		if (!isString(eventType) && !isRegExp(eventType) && !(eventType instanceof Event))
+		if (typeof eventType !== "string" && !(eventType instanceof RegExp) && !(eventType instanceof Event))
 			throw new Error("Emitter.on requires a String, Event or RegExp as the first argument");
 
-		if (!isFunction(listener)) throw new Error("Emitter.on requires a function as the second argument");
+		if (typeof listener !== "function") throw new Error("Emitter.on requires a function as the second argument");
 
 		isStatic = findInArgArray(arguments, isBoolean, 2, false);
 		times = findInArgArray(arguments, n => Number.isFinite(n) || n === Infinity, 2, Infinity);
@@ -132,7 +129,7 @@ export default class Emitter {
 	off(eventType, listener, context, force) {
 		if (eventType == null) throw new Error("Emitter.off requires a String or a RegExp as the first argument");
 
-		if (!isFunction(listener)) throw new Error("Emitter.off requires a function as the second argument");
+		if (typeof listener !== "function") throw new Error("Emitter.off requires a function as the second argument");
 
 		force = findInArgArray(arguments, isBoolean, 2, false);
 		context = findInArgArray(arguments, o => typeof o === "object", 2, undefined);
@@ -144,7 +141,7 @@ export default class Emitter {
 
 		if (!eventMap.has(eventType)) eventMap.set(eventType, []);
 
-		if (isString(eventType)) {
+		if (typeof eventType === "string") {
 			let listeners = eventMap.get(eventType);
 			listeners.forEach((listenerData, i) => {
 				if (listenerData.func === listener && listenerData.ctx === context && (listenerData.isStatic ? force : true))
@@ -153,10 +150,10 @@ export default class Emitter {
 
 			// remove the listener array if there are no listeners left
 			if (listeners.length === 0) eventMap.delete(eventType);
-		} else if (isRegExp(eventType)) {
+		} else if (eventType instanceof RegExp) {
 			eventMap.forEach((listeners, listenersEventType) => {
 				// if the regexp flags and source match then remove the listeners
-				if (isRegExp(listenersEventType) && isRegExpEqual(eventType, listenersEventType)) {
+				if (listenersEventType instanceof RegExp && isRegExpEqual(eventType, listenersEventType)) {
 					listeners.forEach((listenerData, i) => {
 						if (
 							listenerData.func === listener &&
@@ -195,18 +192,22 @@ export default class Emitter {
 
 			// if the event dose not have a target set it to this emitter
 			if (event.target === undefined) event.target = this;
-		} else if (isString(eventType)) event = new Event(eventType, args, this);
+		} else if (typeof eventType === "string") event = new Event(eventType, args, this);
 		else throw new Error("Emitter.emit requires a String or Event as the first argument");
 
 		let listenerArgs = Array.from(event.args).concat([event]);
 		eventMap.forEach((listeners, listenersEventType) => {
 			if (
 				// if they are both strings and they match
-				(isString(event.type) && listenersEventType === event.type) ||
+				(typeof event.type === "string" && listenersEventType === event.type) ||
 				// if the listenersEventType is a RegExp and the event type is a string, see if they match
-				(isString(event.type) && isRegExp(listenersEventType) && listenersEventType.test(event.type)) ||
+				(typeof event.type === "string" &&
+					listenersEventType instanceof RegExp &&
+					listenersEventType.test(event.type)) ||
 				// if they are both RegExp see if they match
-				(isRegExp(event.type) && isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, event.type))
+				(event.type instanceof RegExp &&
+					listenersEventType instanceof RegExp &&
+					isRegExpEqual(listenersEventType, event.type))
 			) {
 				listeners.forEach(listener => {
 					listener.func.apply(listener.ctx, listenerArgs);
@@ -233,19 +234,19 @@ export default class Emitter {
 		// if there is no event map, just exit
 		if (!eventMap) return this;
 
-		if (isString(eventType)) {
+		if (typeof eventType === "string") {
 			clearListeners(eventMap, eventType, force);
 		} else if (eventType instanceof Event) {
 			clearListeners(eventMap, eventType.type, force);
-		} else if (isRegExp(eventType)) {
+		} else if (eventType instanceof RegExp) {
 			Array.from(eventMap)
 				.map(a => a[0])
 				.forEach(listenersEventType => {
 					if (
 						// if the string matches the regex
-						(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType)) ||
+						(typeof listenersEventType === "string" && useRegExp && eventType.test(listenersEventType)) ||
 						// if the regex(s) match
-						(isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, eventType))
+						(listenersEventType instanceof RegExp && isRegExpEqual(listenersEventType, eventType))
 					) {
 						clearListeners(eventMap, listenersEventType, force);
 					}
@@ -280,18 +281,18 @@ export default class Emitter {
 		// if there is not event map, just exit
 		if (!eventMap) return 0;
 
-		if (isString(eventType)) {
+		if (typeof eventType === "string") {
 			return eventMap.has(eventType) ? eventMap.get(eventType).length : 0;
 		} else if (eventType instanceof Event) {
 			return eventMap.has(eventType.type) ? eventMap.get(eventType.type).length : 0;
-		} else if (isRegExp(eventType)) {
+		} else if (eventType instanceof RegExp) {
 			let total = 0;
 			eventMap.forEach((listeners, listenersEventType) => {
 				if (
 					// if the string matches the regex
-					(isString(listenersEventType) && useRegExp && eventType.test(listenersEventType)) ||
+					(typeof listenersEventType === "string" && useRegExp && eventType.test(listenersEventType)) ||
 					// if the regex(s) match
-					(isRegExp(listenersEventType) && isRegExpEqual(listenersEventType, eventType))
+					(listenersEventType instanceof RegExp && isRegExpEqual(listenersEventType, eventType))
 				) {
 					total += listeners.length;
 				}
