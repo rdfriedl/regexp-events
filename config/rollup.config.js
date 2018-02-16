@@ -16,17 +16,8 @@ module.exports = {
 		}),
 		babel({
 			exclude: "node_modules/**",
-			presets: [
-				[
-					"env",
-					{
-						modules: false,
-						targets: {
-							node: "current",
-						},
-					},
-				],
-			],
+			presets: [["env", { modules: false }]],
+			plugins: ["external-helpers"],
 			sourceMaps: true,
 			babelrc: false,
 		}),
