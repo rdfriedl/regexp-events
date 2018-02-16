@@ -50,6 +50,7 @@
     "@commitlint/cli": "^6.1.0",
     "@commitlint/config-conventional": "^6.1.0",
     "@commitlint/prompt-cli": "^6.1.0",
+    "@semantic-release/changelog": "^1.0.1",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-istanbul": "^4.1.4",
@@ -80,6 +81,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^2.0.1",
+    "semantic-release": "^12.4.1",
     "sinon": "^2.3.8",
     "sinon-chai": "^2.11.0",
     "uglify-es": "^3.0.24"

@@ -210,6 +210,7 @@ jobs:
   release:
     docker:
       - image: circleci/node:latest
+    working_directory: ~/repo
     steps:
       - checkout
       - restore_cache:
@@ -252,8 +253,9 @@ workflows:
             - test-node_8
             - test-node_latest
             - test-browsers
-      - publish-docs:
+      - release:
           requires:
+            - build
             - docs
             - test-node_4
             - test-node_6
@@ -264,10 +266,10 @@ workflows:
             branches:
               only:
                 - master
-      - release:
+      - publish-docs:
           requires:
-            - build
             - docs
+            - release
             - test-node_4
             - test-node_6
             - test-node_8
