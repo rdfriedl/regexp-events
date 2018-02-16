@@ -1,34 +1,34 @@
 {
-  "name": "regexp-events",
-  "version": "1.0.0",
-  "description": "A simple RegExp event emitter",
-  "main": "dist/regexp-events.js",
-  "browser": "dist/regexp-events.umd.js",
-  "module": "dist/regexp-events.es.js",
-  "scripts": {
-    "precommit": "pretty-quick --staged",
-    "commitmsg": "commitlint -e $GIT_PARAMS",
-    "commit": "commit",
-    "prepublishOnly": "npm run build",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "build": "npm-run-all --parallel build:**:*",
-    "build:src": "rollup -c config/rollup.config.js",
-    "build:min": "rollup -c config/rollup.min.config.js",
-    "build:es": "rollup -c config/rollup.es.config.js",
-    "build:es:min": "rollup -c config/rollup.es.min.config.js",
-    "build:umd": "rollup -c config/rollup.umd.config.js",
-    "build:umd:min": "rollup -c config/rollup.umd.min.config.js",
-    "clean:test": "rimraf coverage",
-    "pretest": "npm run clean:test",
-    "test": "npm-run-all --parallel test:karma test:node",
-    "test:karma": "karma start karma.config.js",
-    "test:node": "mocha --compilers js:babel-core/register --R spec test/node.js",
-    "test:debug": "karma start karma.config.js --browsers Chrome --no-single-run",
-    "format": "prettier --write ./**/*.{js,json,css,md}",
-    "predocs": "rimraf docs",
-    "docs": "esdoc"
-  },
+	"name": "regexp-events",
+	"version": "1.0.1",
+	"description": "A simple RegExp event emitter",
+	"main": "dist/regexp-events.js",
+	"browser": "dist/regexp-events.umd.js",
+	"module": "dist/regexp-events.es.js",
+	"scripts": {
+		"precommit": "pretty-quick --staged",
+		"commitmsg": "commitlint -e $GIT_PARAMS",
+		"commit": "commit",
+		"prepublishOnly": "npm run build",
+		"clean": "rimraf dist",
+		"prebuild": "npm run clean",
+		"build": "npm-run-all --parallel build:**:*",
+		"build:src": "rollup -c config/rollup.config.js",
+		"build:min": "rollup -c config/rollup.min.config.js",
+		"build:es": "rollup -c config/rollup.es.config.js",
+		"build:es:min": "rollup -c config/rollup.es.min.config.js",
+		"build:umd": "rollup -c config/rollup.umd.config.js",
+		"build:umd:min": "rollup -c config/rollup.umd.min.config.js",
+		"clean:test": "rimraf coverage",
+		"pretest": "npm run clean:test",
+		"test": "npm-run-all --parallel test:karma test:node",
+		"test:karma": "karma start karma.config.js",
+		"test:node": "mocha --compilers js:babel-core/register --R spec test/node.js",
+		"test:debug": "karma start karma.config.js --browsers Chrome --no-single-run",
+		"format": "prettier --write ./**/*.{js,json,css,md}",
+		"predocs": "rimraf docs",
+		"docs": "esdoc"
+	},
   "keywords": [
     "events",
     "emitter",
@@ -46,6 +46,7 @@
     "@commitlint/config-conventional": "^6.1.0",
     "@commitlint/prompt-cli": "^6.1.0",
     "@semantic-release/changelog": "^1.0.1",
+    "@semantic-release/git": "^3.0.1",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-istanbul": "^4.1.4",
@@ -87,23 +88,32 @@
     "trailingComma": "all",
     "printWidth": 120
   },
+	"commitlint": {
+		"extends": ["@commitlint/config-conventional"]
+	},
   "release": {
     "verifyConditions": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
-      {
-        "path": "@semantic-release/github",
-        "assets": [
-          "dist",
-          "package*.json",
-          "CHANGELOG.md"
-        ]
-      }
+			"@semantic-release/git",
+			"@semantic-release/github"
     ],
     "publish": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
-      "@semantic-release/github"
+			{
+				"path": "@semantic-release/git",
+				"assets": [
+					"package.json",
+					"package-lock.json",
+					"CHANGELOG.md",
+					"dist"
+				]
+			},
+			{
+				"path": "@semantic-release/github",
+				"assets": "dist"
+			}
     ]
   }
 }
