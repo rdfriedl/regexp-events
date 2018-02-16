@@ -25,7 +25,15 @@ module.exports = {
 					},
 				],
 			],
-			plugins: ["external-helpers", "istanbul"],
+			plugins: [
+				"external-helpers",
+				[
+					"istanbul",
+					{
+						exclude: ["dist/**/*.js", "test/**/*.js", "**/*.spec.js"],
+					},
+				],
+			],
 			sourceMaps: true,
 			babelrc: false,
 		}),
