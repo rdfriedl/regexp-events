@@ -167,6 +167,25 @@ jobs:
       - run:
           name: Run Tests
           command: npm run test:karma
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - coverage
+
+  upload-coverage:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Upload Coverage
+          command: npx codecov
 
   publish-docs:
     docker:
@@ -214,6 +233,13 @@ workflows:
       - test-browsers:
           requires:
             - build
+      - upload-coverage:
+          requires:
+            - test-node_4
+            - test-node_6
+            - test-node_8
+            - test-node_latest
+            - test-browsers
       - publish-docs:
           requires:
             - docs
@@ -225,5 +251,5 @@ workflows:
           filters:
             branches:
               only:
-                - develop
+                - master
 

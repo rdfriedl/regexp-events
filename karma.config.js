@@ -16,7 +16,6 @@ module.exports = function(config) {
 			"karma-source-map-support",
 			"karma-rollup-plugin",
 			"karma-coverage",
-			"karma-coverage-html-index-reporter",
 		],
 
 		browsers: ["ChromeHeadless", "FirefoxHeadless", "PhantomJS"],
@@ -38,7 +37,7 @@ module.exports = function(config) {
 
 		singleRun: true,
 
-		reporters: ["mocha", "coverage", "coverage-html-index"],
+		reporters: ["mocha", "coverage"],
 
 		client: {
 			captureConsole: false,
@@ -53,8 +52,8 @@ module.exports = function(config) {
 		},
 
 		coverageReporter: {
-			type: "html",
 			dir: path.resolve(__dirname, "coverage/"),
+			reporters: [{ type: "lcov", subdir: "." }],
 		},
 	});
 };
