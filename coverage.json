@@ -7,9 +7,9 @@
       "expectCount": 16,
       "actualCount": 13,
       "undocumentLines": [
-        7,
-        11,
-        21
+        4,
+        8,
+        18
       ]
     },
     "src/Event.js": {
