@@ -36,6 +36,34 @@ export default function EmitterTestSuite(Emitter, Event) {
 			this.listener = sinon.stub();
 		});
 
+		describe("createEventMap", function() {
+			it("should create an eventMap if one dose not exist", function() {
+				Emitter.events = null;
+
+				Emitter.createEventMap(this.emitter);
+
+				expect(Emitter.events).to.exist;
+			});
+
+			it("should not create a new events map if one exists", function() {
+				let events = Emitter.events;
+
+				Emitter.createEventMap(this.emitter);
+
+				expect(Emitter.events).to.equal(events);
+			});
+		});
+
+		describe("removeEventMap", function() {
+			it("should not create an eventMap if one dose not exist", function() {
+				Emitter.events = null;
+
+				Emitter.removeEventMap(this.emitter);
+
+				expect(Emitter.events).to.be.null;
+			});
+		});
+
 		describe("on", function() {
 			it("(String, Function)", function() {
 				this.emitter.on("test", this.listener);
@@ -417,6 +445,12 @@ export default function EmitterTestSuite(Emitter, Event) {
 		});
 
 		describe("count", function() {
+			it("should return 0 if eventMap has not been created yet", function() {
+				Emitter.events = null;
+
+				expect(this.emitter.count("testing")).to.equal(0);
+			});
+
 			it("() returns total number of all listeners on the emitter", function() {
 				this.emitter.on("test", this.listener);
 				this.emitter.on("test2", this.listener);
@@ -537,6 +571,16 @@ export default function EmitterTestSuite(Emitter, Event) {
 				for (let i = 0; i < 20; i++) this.emitter.emit("test");
 
 				expect(this.listener).to.have.callCount(10);
+			});
+		});
+
+		describe("dispose", function() {
+			it("should call Emitter.removeEventMap", function() {
+				sinon.spy(Emitter, "removeEventMap");
+
+				this.emitter.dispose();
+
+				expect(Emitter.removeEventMap).to.have.been.called;
 			});
 		});
 	});

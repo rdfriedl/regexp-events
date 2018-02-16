@@ -51,8 +51,10 @@ export default class Emitter {
 	 * @return {Map}
 	 */
 	static removeEventMap(emitter) {
-		let map = this.events || (this.events = new WeakMap());
-		if (map.has(emitter)) map.delete(emitter);
+		let map = this.events;
+		if (map && emitter && map.has(emitter)) {
+			map.delete(emitter);
+		}
 	}
 
 	/**
