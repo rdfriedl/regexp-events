@@ -1,26 +1,42 @@
-const path = require('path');
-const resolve = require('rollup-plugin-node-resolve');
-const commonjs = require('rollup-plugin-commonjs');
-const babel = require('rollup-plugin-babel');
-const {banner, amd, moduleName} = require('./config');
+const resolve = require("rollup-plugin-node-resolve");
+const commonjs = require("rollup-plugin-commonjs");
+const babel = require("rollup-plugin-babel");
+const { banner, amd, moduleName } = require("./config");
 
 module.exports = {
-	entry: 'test/index.js',
-	format: 'iife',
+	entry: "test/index.js",
+	format: "iife",
 	amd,
 	moduleName,
 	banner,
 	plugins: [
 		resolve(),
 		commonjs({
-			include: 'node_modules/**'
+			include: ["node_modules/**", "dist/**"],
 		}),
 		babel({
-			exclude: 'node_modules/**',
-			presets: ['es2015-rollup'],
-			plugins: ['istanbul'],
-			sourceMaps: true
-		})
+			exclude: "node_modules/**",
+			presets: [
+				[
+					"env",
+					{
+						useBuiltIns: true,
+						modules: false,
+					},
+				],
+			],
+			plugins: [
+				"external-helpers",
+				[
+					"istanbul",
+					{
+						exclude: ["dist/**/*.js", "test/**/*.js", "**/*.spec.js"],
+					},
+				],
+			],
+			sourceMaps: true,
+			babelrc: false,
+		}),
 	],
-	sourceMap: 'inline'
+	sourceMap: "inline",
 };

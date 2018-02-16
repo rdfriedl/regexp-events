@@ -1,0 +1,22 @@
+{
+	"source": "./src",
+	"destination": "./docs",
+	"excludes": ["spec\\.js$"],
+	"plugins": [
+		{
+			"name": "esdoc-standard-plugin",
+			"option": {
+				"brand": {
+					"title": "RegExp Events",
+					"repository": "https://github.com/rdfriedl/regexp-events",
+					"author": "https://rdfriedl.com"
+				},
+				"test": {
+					"source": "./test/",
+					"interfaces": ["describe", "it"],
+					"includes": ["spec\\.js$"]
+				}
+			}
+		}
+	]
+}

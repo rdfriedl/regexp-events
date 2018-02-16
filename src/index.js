@@ -1,7 +1,4 @@
-import Emitter from './Emitter';
-import Event from './Event';
+import Emitter from "./Emitter";
+import Event from "./Event";
 
-export {
-	Emitter,
-	Event
-}
+export { Emitter, Event };

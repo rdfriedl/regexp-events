@@ -1,72 +1,280 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
-  test:
+  install:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:latest-browsers
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
+      - image: circleci/node:latest
     working_directory: ~/repo
-
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: npm install
-
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: npm run test
+          key: node_modules-node_latest-{{ checksum "package.json" }}
 
   build:
     docker:
-      - image: circleci/node:latest-browsers
-
+      - image: circleci/node:latest
     working_directory: ~/repo
-
+    environment:
+      - NODE_ENV: "production"
     steps:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - dist
 
-      - run: npm install
+  docs:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Build Docs
+          command: npm run docs
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - docs
 
+  test-node_4:
+    docker:
+      - image: circleci/node:4
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_4-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
+          key: node_modules-node_4-{{ checksum "package.json" }}
+      - run: rm -rf dist
+      - attach_workspace:
+          at: ./
       - run:
-          environment:
-            - NODE_ENV: "production"
-          command: npm run build
+          name: Run Tests
+          command: npm run test:node
+
+  test-node_6:
+    docker:
+      - image: circleci/node:6
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_6-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_6-{{ checksum "package.json" }}
+      - run: rm -rf dist
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Run Tests
+          command: npm run test:node
+
+  test-node_8:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_8-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_8-{{ checksum "package.json" }}
+      - run: rm -rf dist
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Run Tests
+          command: npm run test:node
+
+  test-node_latest:
+    docker:
+      - image: circleci/node:latest
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_latest-{{ checksum "package.json" }}
+      - run: rm -rf dist
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Run Tests
+          command: npm run test:node
+
+  test-browsers:
+    docker:
+      - image: circleci/node:latest-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Install dependancies
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: node_modules-node_latest-{{ checksum "package.json" }}
+      - run: rm -rf dist
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Run Tests
+          command: npm run test:karma
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - coverage
+
+  upload-coverage:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Upload Coverage
+          command: npx codecov
+
+  publish-docs:
+    docker:
+      - image: circleci/node:latest-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Set Git User
+          command: |
+            git config --global user.email "${GIT_EMAIL}" && \
+            git config --global user.name "${GIT_USERNAME}";
+      - run:
+          name: Publish Docs
+          command: npx gh-pages -d docs -m Update Docs
+
+  release:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Release Package
+          command: npx semantic-release
 
 workflows:
   version: 2
-
   test-and-build:
     jobs:
-      - test
+      - install
       - build:
-        requires:
-          - test
+          requires:
+            - install
+      - docs:
+          requires:
+            - install
+      - test-node_4:
+          requires:
+            - build
+      - test-node_6:
+          requires:
+            - build
+      - test-node_8:
+          requires:
+            - build
+      - test-node_latest:
+          requires:
+            - build
+      - test-browsers:
+          requires:
+            - build
+      - upload-coverage:
+          requires:
+            - test-node_4
+            - test-node_6
+            - test-node_8
+            - test-node_latest
+            - test-browsers
+      - publish-docs:
+          requires:
+            - docs
+            - test-node_4
+            - test-node_6
+            - test-node_8
+            - test-node_latest
+            - test-browsers
+          filters:
+            branches:
+              only:
+                - master
+      - release:
+          requires:
+            - build
+            - docs
+            - test-node_4
+            - test-node_6
+            - test-node_8
+            - test-node_latest
+            - test-browsers
+          filters:
+            branches:
+              only:
+                - master
+

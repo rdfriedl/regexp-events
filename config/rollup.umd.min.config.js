@@ -1,31 +1,33 @@
-const resolve = require('rollup-plugin-node-resolve');
-const commonjs = require('rollup-plugin-commonjs');
-const uglify = require('rollup-plugin-uglify');
-const babel = require('rollup-plugin-babel');
-const {minBanner, keepBanner, moduleName, amd, entry} = require('./config');
+const resolve = require("rollup-plugin-node-resolve");
+const commonjs = require("rollup-plugin-commonjs");
+const uglify = require("rollup-plugin-uglify");
+const babel = require("rollup-plugin-babel");
+const { minBanner, keepBanner, moduleName, amd, entry } = require("./config");
 
 module.exports = {
 	entry,
-	format: 'umd',
+	format: "umd",
 	amd,
 	moduleName,
 	banner: minBanner,
 	plugins: [
 		resolve(),
 		commonjs({
-			include: 'node_modules/**'
+			include: "node_modules/**",
 		}),
 		babel({
-			exclude: 'node_modules/**',
-			presets: ['es2015-rollup'],
-			sourceMaps: true
+			exclude: "node_modules/**",
+			presets: [["env", { modules: false }]],
+			plugins: ["external-helpers"],
+			sourceMaps: true,
+			babelrc: false,
 		}),
 		uglify({
 			output: {
-				comments: keepBanner
-			}
-		})
+				comments: keepBanner,
+			},
+		}),
 	],
-	dest: 'dist/regexp-events.umd.min.js',
-	sourceMap: true
+	dest: "dist/regexp-events.umd.min.js",
+	sourceMap: true,
 };
