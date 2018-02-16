@@ -53,29 +53,6 @@ jobs:
           paths:
             - docs
 
-  test-node_4:
-    docker:
-      - image: circleci/node:4
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - node_modules-node_4-{{ checksum "package.json" }}
-      - run:
-          name: Install dependancies
-          command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: node_modules-node_4-{{ checksum "package.json" }}
-      - run: rm -rf dist
-      - attach_workspace:
-          at: ./
-      - run:
-          name: Run Tests
-          command: npm run test:node
-
   test-node_6:
     docker:
       - image: circleci/node:6
@@ -231,9 +208,6 @@ workflows:
       - docs:
           requires:
             - install
-      - test-node_4:
-          requires:
-            - build
       - test-node_6:
           requires:
             - build
@@ -248,7 +222,6 @@ workflows:
             - build
       - upload-coverage:
           requires:
-            - test-node_4
             - test-node_6
             - test-node_8
             - test-node_latest
@@ -257,7 +230,6 @@ workflows:
           requires:
             - build
             - docs
-            - test-node_4
             - test-node_6
             - test-node_8
             - test-node_latest
@@ -270,7 +242,6 @@ workflows:
           requires:
             - docs
             - release
-            - test-node_4
             - test-node_6
             - test-node_8
             - test-node_latest
