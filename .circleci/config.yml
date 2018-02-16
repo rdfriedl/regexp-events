@@ -201,11 +201,23 @@ jobs:
       - run:
           name: Set Git User
           command: |
-            git config --global user.email "${GIT_USER_EMAIL}" && \
-            git config --global user.name "${GIT_USER_NAME}";
+            git config --global user.email "${GIT_EMAIL}" && \
+            git config --global user.name "${GIT_USERNAME}";
       - run:
           name: Publish Docs
           command: npx gh-pages -d docs -m Update Docs
+
+  release:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - node_modules-node_latest-{{ checksum "package.json" }}
+      - run:
+          name: Release Package
+          command: npx semantic-release
 
 workflows:
   version: 2
@@ -242,6 +254,19 @@ workflows:
             - test-browsers
       - publish-docs:
           requires:
+            - docs
+            - test-node_4
+            - test-node_6
+            - test-node_8
+            - test-node_latest
+            - test-browsers
+          filters:
+            branches:
+              only:
+                - master
+      - release:
+          requires:
+            - build
             - docs
             - test-node_4
             - test-node_6
