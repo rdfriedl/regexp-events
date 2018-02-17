@@ -1,3 +1,2 @@
-import "./scenarios/source";
-import "./scenarios/es-bundle";
-import "./scenarios/cjs-bundle";
+import "./Emitter.spec";
+import "./Event.spec";

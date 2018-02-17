@@ -1,3 +1,5 @@
+import Event from "../src/Event";
+
 export default function EventTestSuite(Event) {
 	describe("Event", () => {
 		describe("constructor", () => {
