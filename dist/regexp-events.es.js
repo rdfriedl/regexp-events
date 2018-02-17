@@ -1,6 +1,6 @@
 /**
- * regexp-events v1.0.1
- * built Fri Feb 16 2018 07:39:36 GMT-0600 (CST)
+ * regexp-events v1.0.2
+ * built Sat Feb 17 2018 01:01:14 GMT+0000 (UTC)
  */
 /**
  * @classdesc the basic event class
@@ -113,8 +113,10 @@ class Emitter {
 	 * @return {Map}
 	 */
 	static removeEventMap(emitter) {
-		let map = this.events || (this.events = new WeakMap());
-		if (map.has(emitter)) map.delete(emitter);
+		let map = this.events;
+		if (map && emitter && map.has(emitter)) {
+			map.delete(emitter);
+		}
 	}
 
 	/**

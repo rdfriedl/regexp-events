@@ -1,6 +1,6 @@
 /**
- * regexp-events v1.0.1
- * built Fri Feb 16 2018 07:39:37 GMT-0600 (CST)
+ * regexp-events v1.0.2
+ * built Sat Feb 17 2018 01:01:15 GMT+0000 (UTC)
  */
 'use strict';
 
@@ -446,8 +446,10 @@ var Emitter = function () {
 	}, {
 		key: "removeEventMap",
 		value: function removeEventMap(emitter) {
-			var map = this.events || (this.events = new WeakMap());
-			if (map.has(emitter)) map.delete(emitter);
+			var map = this.events;
+			if (map && emitter && map.has(emitter)) {
+				map.delete(emitter);
+			}
 		}
 	}]);
 	return Emitter;
