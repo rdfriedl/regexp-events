@@ -38,7 +38,9 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">test/Event.spec.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default function EventTestSuite(Event) {
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Event from &quot;../src/Event&quot;;
+
+export default function EventTestSuite(Event) {
 	describe(&quot;Event&quot;, () =&gt; {
 		describe(&quot;constructor&quot;, () =&gt; {
 			it(&quot;should throw an error if type is not a string&quot;, () =&gt; {

@@ -25,445 +25,493 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber33",
+    "test-file/test/Emitter.spec.js.html#lineNumber34",
     "Emitter",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber335",
+    "test-file/test/Emitter.spec.js.html#lineNumber366",
     "Emitter clear",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber345",
+    "test-file/test/Emitter.spec.js.html#lineNumber376",
     "Emitter clear () dose not remove static listeners",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber336",
+    "test-file/test/Emitter.spec.js.html#lineNumber367",
     "Emitter clear () removes all listeners",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber387",
+    "test-file/test/Emitter.spec.js.html#lineNumber418",
     "Emitter clear (Event) removes all listeners of event type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber394",
+    "test-file/test/Emitter.spec.js.html#lineNumber425",
     "Emitter clear (RegExp) removes listeners with matching String or same RegExp",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber402",
+    "test-file/test/Emitter.spec.js.html#lineNumber433",
     "Emitter clear (RegExp, force=false, useRegexp=false) only removes matching RegExp",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber410",
+    "test-file/test/Emitter.spec.js.html#lineNumber441",
     "Emitter clear (RegExp, force=false, useRegexp=false) takes RegExp flags into account when comparing regexes",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber366",
+    "test-file/test/Emitter.spec.js.html#lineNumber397",
     "Emitter clear (String) removes all listeners of type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber380",
+    "test-file/test/Emitter.spec.js.html#lineNumber411",
     "Emitter clear (String, force=false) dose not remove static listeners of type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber373",
+    "test-file/test/Emitter.spec.js.html#lineNumber404",
     "Emitter clear (String, force=true) removes static listeners of type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber359",
+    "test-file/test/Emitter.spec.js.html#lineNumber390",
     "Emitter clear (force=false) dose not remove static listeners",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber352",
+    "test-file/test/Emitter.spec.js.html#lineNumber383",
     "Emitter clear (force=true) removes static listeners",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber419",
+    "test-file/test/Emitter.spec.js.html#lineNumber450",
     "Emitter count",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber420",
+    "test-file/test/Emitter.spec.js.html#lineNumber457",
     "Emitter count () returns total number of all listeners on the emitter",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber433",
+    "test-file/test/Emitter.spec.js.html#lineNumber470",
     "Emitter count (Event) returns number of listeners of Event.type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber440",
+    "test-file/test/Emitter.spec.js.html#lineNumber477",
     "Emitter count (RegExp) returns number of listeners that match the RegExp",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber450",
+    "test-file/test/Emitter.spec.js.html#lineNumber487",
     "Emitter count (RegExp, useRegExp=false) returns number of listeners that have a identical RegExp",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber426",
+    "test-file/test/Emitter.spec.js.html#lineNumber463",
     "Emitter count (String) returns number of listeners of that type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber468",
+    "test-file/test/Emitter.spec.js.html#lineNumber451",
+    "Emitter count should return 0 if eventMap has not been created yet",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Emitter.spec.js.html#lineNumber42",
+    "Emitter createEventMap",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Emitter.spec.js.html#lineNumber43",
+    "Emitter createEventMap should create an eventMap if one dose not exist",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Emitter.spec.js.html#lineNumber51",
+    "Emitter createEventMap should not create a new events map if one exists",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Emitter.spec.js.html#lineNumber580",
+    "Emitter dispose",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Emitter.spec.js.html#lineNumber581",
+    "Emitter dispose should call Emitter.removeEventMap",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Emitter.spec.js.html#lineNumber505",
     "Emitter emit",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber495",
+    "test-file/test/Emitter.spec.js.html#lineNumber532",
     "Emitter emit (Event) calls listeners",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber508",
+    "test-file/test/Emitter.spec.js.html#lineNumber545",
     "Emitter emit (Event) calls listeners with Event.args",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber501",
+    "test-file/test/Emitter.spec.js.html#lineNumber538",
     "Emitter emit (Event) emits the Event that is passed in",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber515",
+    "test-file/test/Emitter.spec.js.html#lineNumber552",
     "Emitter emit (Event) sets Event.target if its not already set",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber476",
+    "test-file/test/Emitter.spec.js.html#lineNumber513",
     "Emitter emit (String) calls listeners",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber482",
+    "test-file/test/Emitter.spec.js.html#lineNumber519",
     "Emitter emit (String, args...) calls listeners with arguments",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber488",
+    "test-file/test/Emitter.spec.js.html#lineNumber525",
     "Emitter emit (String, args...) passes the Event as the last arguments",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber528",
+    "test-file/test/Emitter.spec.js.html#lineNumber565",
     "Emitter emit dost not fire the event if Emitter.suppressEvents == true",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber535",
+    "test-file/test/Emitter.spec.js.html#lineNumber572",
     "Emitter emit removes listener after calling is the correct number of times",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber469",
+    "test-file/test/Emitter.spec.js.html#lineNumber506",
     "Emitter emit throws error if eventType is not a string",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber249",
+    "test-file/test/Emitter.spec.js.html#lineNumber280",
     "Emitter off",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber284",
+    "test-file/test/Emitter.spec.js.html#lineNumber315",
     "Emitter off (Event, Function) removes listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber290",
+    "test-file/test/Emitter.spec.js.html#lineNumber321",
     "Emitter off (RegExp, Function) removes listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber262",
+    "test-file/test/Emitter.spec.js.html#lineNumber293",
     "Emitter off (String, Function) dose not remove static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber275",
+    "test-file/test/Emitter.spec.js.html#lineNumber306",
     "Emitter off (String, Function) dost not remove listener with different context",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber257",
+    "test-file/test/Emitter.spec.js.html#lineNumber288",
     "Emitter off (String, Function) removes listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber268",
+    "test-file/test/Emitter.spec.js.html#lineNumber299",
     "Emitter off (String, Function, context) removes listener with context",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber314",
+    "test-file/test/Emitter.spec.js.html#lineNumber345",
     "Emitter off (String, Function, context, force=false) dose not remove static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber308",
+    "test-file/test/Emitter.spec.js.html#lineNumber339",
     "Emitter off (String, Function, context, force=true) removes static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber302",
+    "test-file/test/Emitter.spec.js.html#lineNumber333",
     "Emitter off (String, Function, force=false) dose not remove static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber327",
+    "test-file/test/Emitter.spec.js.html#lineNumber358",
     "Emitter off (String, Function, force=false, context) dose not remove static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber297",
+    "test-file/test/Emitter.spec.js.html#lineNumber328",
     "Emitter off (String, Function, force=true) removes static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber321",
+    "test-file/test/Emitter.spec.js.html#lineNumber352",
     "Emitter off (String, Function, force=true, context) removes static listener",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber250",
+    "test-file/test/Emitter.spec.js.html#lineNumber281",
     "Emitter off only removes the first listener that matches",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber39",
+    "test-file/test/Emitter.spec.js.html#lineNumber70",
     "Emitter on",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber216",
+    "test-file/test/Emitter.spec.js.html#lineNumber247",
     "Emitter on () throws if there is no event type",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber208",
+    "test-file/test/Emitter.spec.js.html#lineNumber239",
     "Emitter on (Event, Function)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber222",
+    "test-file/test/Emitter.spec.js.html#lineNumber253",
     "Emitter on (Number|Null|Function) throws if the eventType is not a String, Event or RegExp",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber199",
+    "test-file/test/Emitter.spec.js.html#lineNumber230",
     "Emitter on (RegExp, Function)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber236",
+    "test-file/test/Emitter.spec.js.html#lineNumber267",
     "Emitter on (String) throws if listener function is no provided",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber40",
+    "test-file/test/Emitter.spec.js.html#lineNumber71",
     "Emitter on (String, Function)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber50",
+    "test-file/test/Emitter.spec.js.html#lineNumber81",
     "Emitter on (String, Function, context)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber80",
+    "test-file/test/Emitter.spec.js.html#lineNumber111",
     "Emitter on (String, Function, context, isStatic)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber90",
+    "test-file/test/Emitter.spec.js.html#lineNumber121",
     "Emitter on (String, Function, context, isStatic, times)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber60",
+    "test-file/test/Emitter.spec.js.html#lineNumber91",
     "Emitter on (String, Function, context, times)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber70",
+    "test-file/test/Emitter.spec.js.html#lineNumber101",
     "Emitter on (String, Function, context, times, isStatic)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber101",
+    "test-file/test/Emitter.spec.js.html#lineNumber132",
     "Emitter on (String, Function, isStatic)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber110",
+    "test-file/test/Emitter.spec.js.html#lineNumber141",
     "Emitter on (String, Function, isStatic, context)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber129",
+    "test-file/test/Emitter.spec.js.html#lineNumber160",
     "Emitter on (String, Function, isStatic, context, times)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber120",
+    "test-file/test/Emitter.spec.js.html#lineNumber151",
     "Emitter on (String, Function, isStatic, times)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber139",
+    "test-file/test/Emitter.spec.js.html#lineNumber170",
     "Emitter on (String, Function, isStatic, times, context)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber150",
+    "test-file/test/Emitter.spec.js.html#lineNumber181",
     "Emitter on (String, Function, times)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber159",
+    "test-file/test/Emitter.spec.js.html#lineNumber190",
     "Emitter on (String, Function, times, context)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber178",
+    "test-file/test/Emitter.spec.js.html#lineNumber209",
     "Emitter on (String, Function, times, context, isStatic)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber169",
+    "test-file/test/Emitter.spec.js.html#lineNumber200",
     "Emitter on (String, Function, times, isStatic)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber188",
+    "test-file/test/Emitter.spec.js.html#lineNumber219",
     "Emitter on (String, Function, times, isStatic, context)",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber242",
+    "test-file/test/Emitter.spec.js.html#lineNumber273",
     "Emitter on (String, Null) throws if listener is not a function",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber459",
+    "test-file/test/Emitter.spec.js.html#lineNumber496",
     "Emitter once",
     "test"
   ],
   [
     "",
-    "test-file/test/Emitter.spec.js.html#lineNumber460",
+    "test-file/test/Emitter.spec.js.html#lineNumber497",
     "Emitter once removes listener after the event is fired",
     "test"
   ],
   [
     "",
-    "test-file/test/Event.spec.js.html#lineNumber2",
-    "Event",
+    "test-file/test/Emitter.spec.js.html#lineNumber60",
+    "Emitter removeEventMap",
     "test"
   ],
   [
     "",
-    "test-file/test/Event.spec.js.html#lineNumber3",
-    "Event constructor",
-    "test"
-  ],
-  [
-    "",
-    "test-file/test/Event.spec.js.html#lineNumber22",
-    "Event constructor (String) should return an Event",
-    "test"
-  ],
-  [
-    "",
-    "test-file/test/Event.spec.js.html#lineNumber26",
-    "Event constructor should set args to an empty array if not passed in",
+    "test-file/test/Emitter.spec.js.html#lineNumber61",
+    "Emitter removeEventMap should not create an eventMap if one dose not exist",
     "test"
   ],
   [
     "",
     "test-file/test/Event.spec.js.html#lineNumber4",
+    "Event",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Event.spec.js.html#lineNumber5",
+    "Event constructor",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Event.spec.js.html#lineNumber24",
+    "Event constructor (String) should return an Event",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Event.spec.js.html#lineNumber28",
+    "Event constructor should set args to an empty array if not passed in",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/Event.spec.js.html#lineNumber6",
     "Event constructor should throw an error if type is not a string",
     "test"
   ],
