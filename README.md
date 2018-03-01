@@ -1,6 +1,6 @@
 # RegExp Events
 
-[![CircleCI](https://img.shields.io/circleci/project/github/rdfriedl/regexp-events.svg?style=flat-square)](https://circleci.com/gh/rdfriedl/workflows/regexp-events)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/rdfriedl/regexp-events/master.svg?style=flat-square)](https://circleci.com/gh/rdfriedl/workflows/regexp-events/tree/master)
 [![Codecov](https://img.shields.io/codecov/c/github/rdfriedl/regexp-events.svg?style=flat-square)](https://circleci.com/gh/rdfriedl/workflows/regexp-events)
 [![npm](https://img.shields.io/npm/v/regexp-events.svg?style=flat-square)](https://npmjs.org/package/regexp-events)
 [![Docs: Published](https://img.shields.io/badge/Docs-Published-green.svg?style=flat-square)](http://www.rdfriedl.com/regexp-events/)
