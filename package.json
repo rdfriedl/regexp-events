@@ -2,9 +2,21 @@
   "name": "regexp-events",
   "version": "1.0.2",
   "description": "A simple RegExp event emitter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdfriedl/regexp-events.git"
+  },
+  "author": "Robert Friedl",
+  "keywords": [
+    "events",
+    "emitter",
+    "regexp"
+  ],
   "main": "dist/regexp-events.js",
   "browser": "dist/regexp-events.umd.js",
   "module": "dist/regexp-events.es.js",
+  "jsnext:main": "dist/regexp-events.es.js",
   "scripts": {
     "precommit": "pretty-quick --staged",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -29,11 +41,6 @@
     "predocs": "rimraf docs",
     "docs": "esdoc"
   },
-  "keywords": [
-    "events",
-    "emitter",
-    "regexp"
-  ],
   "directories": {
     "test": "./test/",
     "lib": "./src/"
@@ -41,9 +48,6 @@
   "engines": {
     "node": ">=6.0.0"
   },
-  "repository": "https://github.com/rdfriedl/regexp-events",
-  "author": "rdfriedl",
-  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^6.1.0",
     "@commitlint/config-conventional": "^6.1.0",
