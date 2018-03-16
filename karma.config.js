@@ -14,7 +14,7 @@ module.exports = function(config) {
 			"karma-mocha-reporter",
 			"karma-sinon-chai",
 			"karma-source-map-support",
-			"karma-rollup-plugin",
+			"karma-rollup-preprocessor",
 			"karma-coverage",
 		],
 
