@@ -19,7 +19,7 @@ function keepBanner(node, comment) {
 }
 
 module.exports = {
-	entry: "src/index.js",
+	input: "src/index.js",
 	amd: { id: "regexp-events" },
 	moduleName: "RegExpEvents",
 	banner,

@@ -2,14 +2,11 @@ const resolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
 const uglify = require("rollup-plugin-uglify");
 const babel = require("rollup-plugin-babel");
-const { minBanner, keepBanner, amd, moduleName, entry } = require("./config");
+const { minBanner, keepBanner, amd, moduleName, input } = require("./config");
 
 module.exports = {
-	entry,
-	format: "cjs",
+	input,
 	amd,
-	moduleName,
-	banner: minBanner,
 	plugins: [
 		resolve(),
 		commonjs({
@@ -28,6 +25,11 @@ module.exports = {
 			},
 		}),
 	],
-	dest: "dist/regexp-events.min.js",
-	sourceMap: true,
+	output: {
+		banner: minBanner,
+		file: "dist/regexp-events.min.js",
+		format: "cjs",
+		name: moduleName,
+		sourcemap: true,
+	},
 };

@@ -2,14 +2,11 @@ const resolve = require("rollup-plugin-node-resolve");
 const commonjs = require("rollup-plugin-commonjs");
 const uglify = require("rollup-plugin-uglify");
 const { minify } = require("uglify-es");
-const { minBanner, keepBanner, amd, moduleName, entry } = require("./config");
+const { minBanner, keepBanner, amd, moduleName, input } = require("./config");
 
 module.exports = {
-	entry,
-	format: "es",
+	input,
 	amd,
-	moduleName,
-	banner: minBanner,
 	plugins: [
 		resolve(),
 		commonjs({
@@ -24,6 +21,11 @@ module.exports = {
 			minify,
 		),
 	],
-	dest: "dist/regexp-events.es.min.js",
-	sourceMap: true,
+	output: {
+		banner: minBanner,
+		file: "dist/regexp-events.es.min.js",
+		format: "es",
+		name: moduleName,
+		sourcemap: true,
+	},
 };

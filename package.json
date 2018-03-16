@@ -24,7 +24,7 @@
     "prepublishOnly": "npm run build",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
-    "build": "npm-run-all --parallel build:**:*",
+    "build": "rollup -c rollup.config.js",
     "build:src": "rollup -c config/rollup.config.js",
     "build:min": "rollup -c config/rollup.min.config.js",
     "build:es": "rollup -c config/rollup.es.config.js",

@@ -4,11 +4,8 @@ const babel = require("rollup-plugin-babel");
 const { banner, amd, moduleName } = require("./config");
 
 module.exports = {
-	entry: "test/index.js",
-	format: "iife",
+	input: "test/index.js",
 	amd,
-	moduleName,
-	banner,
 	plugins: [
 		resolve(),
 		commonjs({
@@ -38,5 +35,10 @@ module.exports = {
 			babelrc: false,
 		}),
 	],
-	sourceMap: "inline",
+	output: {
+		banner,
+		format: "iife",
+		name: moduleName,
+		sourcemap: "inline",
+	},
 };
