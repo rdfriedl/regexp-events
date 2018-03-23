@@ -1,3 +1,11 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/rdfriedl/regexp-events/compare/v1.0.2...v1.0.3) (2018-03-23)
+
+
+### Bug Fixes
+
+* **bundle:** fixed es6 bundle not compiling with babel ([0b003da](https://github.com/rdfriedl/regexp-events/commit/0b003da))
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/rdfriedl/regexp-events/compare/v1.0.1...v1.0.2) (2018-02-17)
 
